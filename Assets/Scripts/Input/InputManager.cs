@@ -1,17 +1,16 @@
 using System;
 using Helpers;
+using UnityEngine;
 
 namespace Input
 {
-    public class InputManager : Singleton<InputManager>
+    public class InputManager : MonoBehaviour
     {
         public static InputSystem_Actions InputSystem;
 
         public static event Action OnInputSystemCreated;
-        protected override void Awake()
+        protected void Awake()
         {
-            base.Awake();
-
             InputSystem = new InputSystem_Actions();
             OnInputSystemCreated?.Invoke();
         }
