@@ -29,12 +29,7 @@ public class PlayerDrone : MonoBehaviour
     [SerializeField] private float pitchRate;
     [SerializeField] private float yawRate;
 
-    private float torqueX, torqueY, torqueZ;
-
-    private Vector3 rollVec, pitchVec, yawVec;
-    private float forceX, forceY, forceZ;
-
-    
+   
 
     [Header("Flight Assist")]
 
@@ -45,6 +40,11 @@ public class PlayerDrone : MonoBehaviour
     [SerializeField] private float pitchLimit;
     [SerializeField] private float dragCoefficient;
     [SerializeField] private float limitCoefficient;
+
+     private float torqueX, torqueY, torqueZ;
+
+    private Vector3 rollVec, pitchVec, yawVec;
+    private float forceX, forceY, forceZ;
 
    
 
@@ -74,6 +74,11 @@ public class PlayerDrone : MonoBehaviour
 
     void Update()
     {
+       
+       battery -= Time.deltaTime;
+       
+       
+       
        var pitch = droneAxis.y;
        var roll = droneAxis.x;
        var yaw = droneThrottle.x;
