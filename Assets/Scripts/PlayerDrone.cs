@@ -30,6 +30,7 @@ public class PlayerDrone : MonoBehaviour
     [SerializeField] private float rollDeadZone;
     [SerializeField] private float pitchDeadZone;
 
+   
 
     
     void Start()
@@ -71,7 +72,7 @@ public class PlayerDrone : MonoBehaviour
         rb.AddForce(new Vector3(forceX,forceY,forceZ));
         rb.AddTorque(new Vector3(torqueX,torqueY,torqueZ));
 
-        Debug.Log(transform.rotation.x);
+        
         
     }
 
@@ -81,29 +82,36 @@ public class PlayerDrone : MonoBehaviour
        torqueX = pitch*pitchRate;
     }
 
+ 
+
+   
+   
+
     void DroneFlightAssist(float pitch, float roll, float flightAssist, float pitchDeadZone, float rollDeadZone)
     {
-
+        
+        Debug.Log(flightAssist);
+        
         
         
         if(transform.rotation.eulerAngles.x <= 180f && transform.rotation.eulerAngles.x > pitchDeadZone && pitch == 0)
         {
+            float vel = rb.angularVelocity.x;
+            Mathf.SmoothDampAngle(transform.rotation.x, 0, ref vel , flightAssist);
+            
+          
             
             
-            var t = -flightAssist;
-            torqueX = Mathf.Lerp(-flightAssist,0,t);
-            t += 0.01f;
             
            
            
         }
         else if(transform.rotation.eulerAngles.x > 180f && transform.rotation.eulerAngles.x < 360f - pitchDeadZone && pitch == 0)
         {
+            float vel = rb.angularVelocity.x;
+            Mathf.SmoothDampAngle(transform.rotation.x, 0, ref vel , flightAssist);
             
             
-            var t = flightAssist;
-            torqueX = Mathf.Lerp(flightAssist,0,t);
-            t -= 0.01f;
             
         }
         
