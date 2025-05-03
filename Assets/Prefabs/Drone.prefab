@@ -622,8 +622,8 @@ MonoBehaviour:
   pitchRate: 0.1
   yawRate: 0.1
   flightAssist: 0.2
-  rollDeadZone: 1
-  pitchDeadZone: 1
+  rollDeadZone: 0.5
+  pitchDeadZone: 0.5
   rollLimit: 0
   pitchLimit: 0
   dragCoefficient: 1

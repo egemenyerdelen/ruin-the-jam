@@ -17,6 +17,8 @@ public class PlayerDrone : MonoBehaviour
 
     private Vector2 droneThrottle;
 
+    [SerializeField] private float batteryCap;
+    private float battery;
     
 
     [Header("Flight Characteristics")]
@@ -28,6 +30,8 @@ public class PlayerDrone : MonoBehaviour
     [SerializeField] private float yawRate;
 
     private float torqueX, torqueY, torqueZ;
+
+    private Vector3 rollVec, pitchVec, yawVec;
     private float forceX, forceY, forceZ;
 
     
@@ -49,6 +53,7 @@ public class PlayerDrone : MonoBehaviour
     {
         CreateInputSystem();
         rb = GetComponent<Rigidbody>();
+        battery = batteryCap;
     }
 
     void OnEnable()
@@ -94,6 +99,10 @@ public class PlayerDrone : MonoBehaviour
      
         rb.AddForce(new Vector3(forceX,forceY,forceZ));
         rb.AddTorque(new Vector3(torqueX,torqueY,torqueZ));
+        rb.AddTorque(rollVec);
+        rb.AddTorque(pitchVec);
+        rb.AddTorque(yawVec);
+       
 
         
         
@@ -101,8 +110,8 @@ public class PlayerDrone : MonoBehaviour
 
     void DronePitchRoll(float pitch, float roll)
     {
-       torqueZ = -roll*rollRate*(1/(1+Mathf.Exp(limitCoefficient*(transform.rotation.eulerAngles.z-rollLimit))));
-       torqueX = pitch*pitchRate;
+       rollVec = -roll*rollRate*transform.forward;//*(1/(1+Mathf.Exp(limitCoefficient*(transform.rotation.eulerAngles.z-rollLimit))));
+       pitchVec = pitch*pitchRate*transform.right;
 
       
     }
@@ -112,7 +121,7 @@ public class PlayerDrone : MonoBehaviour
         forceY = transform.up.y*(idleThrust + throttle*maxThrust);
         forceX = transform.up.x*(idleThrust + throttle*maxThrust);
         forceZ = transform.up.z*(idleThrust + throttle*maxThrust);
-        torqueY = yaw*yawRate;
+        yawVec = yaw*yawRate*transform.up;
     }
 
     void AirDrag(float dragCoefficient)
@@ -131,11 +140,7 @@ public class PlayerDrone : MonoBehaviour
     {
         
         
-    
-        
-
-        
-        if(transform.rotation.eulerAngles.x <= 180f && transform.rotation.eulerAngles.x > pitchDeadZone && pitch == 0)
+    if(transform.rotation.eulerAngles.x <= 180f && transform.rotation.eulerAngles.x > pitchDeadZone && pitch == 0)
         {
             torqueX = -(rb.angularVelocity.x + transform.rotation.x)*flightAssist;
             
@@ -171,6 +176,8 @@ public class PlayerDrone : MonoBehaviour
             
         }
         
+
+        torqueY = -rb.angularVelocity.y*flightAssist;
       
         
         
