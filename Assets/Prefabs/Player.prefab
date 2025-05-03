@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3295987051540469523}
   - component: {fileID: 6500549252856389457}
   - component: {fileID: 8622609174606337578}
+  - component: {fileID: 3162094164854268367}
+  - component: {fileID: 1209610783623418617}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -48,6 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerRigidbody: {fileID: 8622609174606337578}
+  mouseSensitivity: 20
   playerMovementForce: 100
 --- !u!54 &8622609174606337578
 Rigidbody:
@@ -76,6 +79,35 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &3162094164854268367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004949611359372643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3d840ffdaaa4cd89b9553e1f237e09c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1209610783623418617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004949611359372643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e924a7b785a4da3839b20b77de2ccbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDetectDistance: 5
+  pickableLayer:
+    serializedVersion: 2
+    m_Bits: 1
+  cameraTransform: {fileID: 6050476617445701453}
 --- !u!1 &6360144701089544061
 GameObject:
   m_ObjectHideFlags: 0
