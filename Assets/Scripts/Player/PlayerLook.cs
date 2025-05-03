@@ -19,7 +19,6 @@ namespace Player
         private void Start()
         {
             _inputSystem = InputManager.InputSystem;
-            // _inputSystem.Player.Enable(); // important!
             _inputSystem.Player.Look.performed += UpdateLookDirection;
         }
 
