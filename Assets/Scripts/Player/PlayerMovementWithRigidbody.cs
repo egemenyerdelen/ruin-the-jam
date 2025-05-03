@@ -8,6 +8,8 @@ namespace Player
     {
         public Rigidbody playerRigidbody;
         
+        public float CurrentMoveMagnitude => _moveDirection.magnitude;
+        
         [SerializeField] private float playerMovementForce;
 
         private InputSystem_Actions _inputSystem;
