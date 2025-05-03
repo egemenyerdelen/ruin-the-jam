@@ -17,18 +17,23 @@ public class PlayerDrone : MonoBehaviour
     
 
     [Header("Flight Characteristics")]
-    [SerializeField] private float thrust;
+    [SerializeField] private float idleThrust;
+
+    [SerializeField] private float maxThrust;
     [SerializeField] private float rollRate;
     [SerializeField] private float pitchRate;
+    [SerializeField] private float yawRate;
 
     private float torqueX, torqueY, torqueZ;
     private float forceX, forceY, forceZ;
+    
 
     [Header("Flight Assist")]
 
     [SerializeField] private float flightAssist;
     [SerializeField] private float rollDeadZone;
     [SerializeField] private float pitchDeadZone;
+    [SerializeField] private float dragCoefficient;
 
    
 
@@ -59,16 +64,16 @@ public class PlayerDrone : MonoBehaviour
     {
        var pitch = droneAxis.y;
        var roll = droneAxis.x;
+       var yaw = droneThrottle.x;
+       var throttle = droneThrottle.y;
+       
 
-       DroneControls(pitch,roll);
-      
+       DronePitchRoll(pitch,roll);
+       DroneEngineYaw(idleThrust,throttle,yaw);
+
+       AirDrag(dragCoefficient);
        
-       
-       
-       
-       
-       
-       //DroneFlightAssist(pitch,roll,flightAssist,pitchDeadZone,rollDeadZone);
+       DroneFlightAssist(pitch,roll,flightAssist,pitchDeadZone,rollDeadZone);
         
 
     }
@@ -83,10 +88,25 @@ public class PlayerDrone : MonoBehaviour
         
     }
 
-    void DroneControls(float pitch, float roll)
+    void DronePitchRoll(float pitch, float roll)
     {
        torqueZ = -roll*rollRate;
        torqueX = pitch*pitchRate;
+    }
+
+    void DroneEngineYaw(float idleThrust, float throttle, float yaw)
+    {
+        forceY = transform.up.y*(idleThrust + throttle*maxThrust);
+        forceX = transform.up.x*(idleThrust + throttle*maxThrust);
+        forceZ = transform.up.z*(idleThrust + throttle*maxThrust);
+        torqueY = yaw*yawRate;
+    }
+
+    void AirDrag(float dragCoefficient)
+    {
+        forceX -= rb.linearVelocity.x*dragCoefficient;
+        forceY -= rb.linearVelocity.y*dragCoefficient;
+        forceZ -= rb.linearVelocity.z*dragCoefficient;
     }
 
  
@@ -103,8 +123,7 @@ public class PlayerDrone : MonoBehaviour
         
         if(transform.rotation.eulerAngles.x <= 180f && transform.rotation.eulerAngles.x > pitchDeadZone && pitch == 0)
         {
-            float vel = rb.angularVelocity.x;
-            Mathf.SmoothDampAngle(transform.rotation.x, 0, ref vel , flightAssist);
+            torqueX = -(rb.angularVelocity.x + transform.rotation.x*0.5f)*flightAssist;
             
           
             
@@ -115,8 +134,7 @@ public class PlayerDrone : MonoBehaviour
         }
         else if(transform.rotation.eulerAngles.x > 180f && transform.rotation.eulerAngles.x < 360f - pitchDeadZone && pitch == 0)
         {
-            float vel = rb.angularVelocity.x;
-            Mathf.SmoothDampAngle(transform.rotation.x, 0, ref vel , flightAssist);
+            torqueX = -(rb.angularVelocity.x + transform.rotation.x*0.5f)*flightAssist;
             
             
             
@@ -130,12 +148,12 @@ public class PlayerDrone : MonoBehaviour
        
         if(transform.rotation.eulerAngles.z <= 180f && transform.rotation.eulerAngles.z > rollDeadZone && roll == 0)
         {
-            torqueZ = -flightAssist;
+            torqueZ = -(rb.angularVelocity.z + transform.rotation.z*0.7f)*flightAssist;
            
         }
         else if(transform.rotation.eulerAngles.z > 180f && transform.rotation.eulerAngles.z < 360f - rollDeadZone && roll == 0)
         {
-            torqueZ = flightAssist;
+            torqueZ = -(rb.angularVelocity.z + transform.rotation.z*0.7f)*flightAssist;
             
         }
         
