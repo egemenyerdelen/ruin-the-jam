@@ -1,8 +1,7 @@
 namespace InventorySystem
 {
-    public abstract class HighlightableAndPickableItem : Item, IPickable
+    public abstract class HighlightableAndPickableItem : HighlightableItem, IPickable
     {
-        public Outline outline;
         public ItemTypes itemType;
         
         public ItemTypeCountMatch GetItemDataMatch()
@@ -13,16 +12,6 @@ namespace InventorySystem
                 Count = 1
             };
             return match;
-        }
-        
-        public void EnableOutline()
-        {
-            outline.enabled = true;
-        }
-
-        public void DisableOutline()
-        {
-            outline.enabled = false;
         }
 
         public abstract void PickUp();

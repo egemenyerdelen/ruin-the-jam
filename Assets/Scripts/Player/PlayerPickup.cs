@@ -30,7 +30,6 @@ namespace Player
 
         private void DetectPickable()
         {
-
             if (Physics.Raycast(cameraTransform.position, cameraTransform.forward, out var hit, maxDetectDistance, pickableLayer))
             {
                 if (hit.transform.CompareTag("Pickable"))
