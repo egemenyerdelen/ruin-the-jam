@@ -1,3 +1,4 @@
+using System.Collections;
 using Input;
 using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
@@ -6,18 +7,30 @@ using UnityEngine.InputSystem;
 
 public class PlayerDrone : MonoBehaviour
 {
-
+    private Rigidbody rb;
     private InputSystem_Actions inputActions;
 
     private Vector3 droneAxis;
 
     private Vector2 droneThrottle;
 
-    private Rigidbody rb;
+    
 
+    [Header("Flight Characteristics")]
     [SerializeField] private float thrust;
     [SerializeField] private float rollRate;
     [SerializeField] private float pitchRate;
+
+    private float torqueX, torqueY, torqueZ;
+    private float forceX, forceY, forceZ;
+
+    [Header("Flight Assist")]
+
+    [SerializeField] private float flightAssist;
+    [SerializeField] private float rollDeadZone;
+    [SerializeField] private float pitchDeadZone;
+
+
     
     void Start()
     {
@@ -37,25 +50,105 @@ public class PlayerDrone : MonoBehaviour
 
         inputActions.Drone.Thrust.performed -= Thrust;
         inputActions.Drone.Thrust.canceled -= ctx => droneThrottle = Vector2.zero;
+        
     }
 
 
     void Update()
     {
+       var pitch = droneAxis.y;
+       var roll = droneAxis.x;
+
+       DroneControls(pitch,roll);
+       DroneFlightAssist(pitch,roll,flightAssist,pitchDeadZone,rollDeadZone);
         
 
     }
 
     void FixedUpdate()
     {
-       var pitch = droneAxis.y;
-       var roll = droneAxis.x;
+     
+        rb.AddForce(new Vector3(forceX,forceY,forceZ));
+        rb.AddTorque(new Vector3(torqueX,torqueY,torqueZ));
 
-       rb.AddTorque(transform.right*pitch*pitchRate);
-       rb.AddTorque(-transform.forward*roll*rollRate);
-       rb.AddForce(transform.up*(thrust + 1.1f*(float)droneThrottle.y));
+        Debug.Log(transform.rotation.x);
+        
+    }
+
+    void DroneControls(float pitch, float roll)
+    {
+       torqueZ = -roll*rollRate;
+       torqueX = pitch*pitchRate;
+    }
+
+    void DroneFlightAssist(float pitch, float roll, float flightAssist, float pitchDeadZone, float rollDeadZone)
+    {
 
         
+        
+        if(transform.rotation.eulerAngles.x <= 180f && transform.rotation.eulerAngles.x > pitchDeadZone && pitch == 0)
+        {
+            
+            
+            var t = -flightAssist;
+            torqueX = Mathf.Lerp(-flightAssist,0,t);
+            t += 0.01f;
+            
+           
+           
+        }
+        else if(transform.rotation.eulerAngles.x > 180f && transform.rotation.eulerAngles.x < 360f - pitchDeadZone && pitch == 0)
+        {
+            
+            
+            var t = flightAssist;
+            torqueX = Mathf.Lerp(flightAssist,0,t);
+            t -= 0.01f;
+            
+        }
+        
+        //if(Mathf.Approximately(transform.rotation.eulerAngles.x,0)  && pitch == 0){rb.AddTorque(new Vector3(0,0,0));}
+        
+       
+       
+       
+       
+        if(transform.rotation.eulerAngles.z <= 180f && transform.rotation.eulerAngles.z > rollDeadZone && roll == 0)
+        {
+            torqueZ = -flightAssist;
+           
+        }
+        else if(transform.rotation.eulerAngles.z > 180f && transform.rotation.eulerAngles.z < 360f - rollDeadZone && roll == 0)
+        {
+            torqueZ = flightAssist;
+            
+        }
+        
+      
+        
+        
+
+        
+        
+        
+        
+
+        
+
+        
+
+
+
+    }
+
+    IEnumerator Wait()
+    {yield return new WaitForSeconds(0.1f);}
+    void DroneFlightLimit()
+    {
+
+
+
+
     }
 
     void CreateInputSystem()
