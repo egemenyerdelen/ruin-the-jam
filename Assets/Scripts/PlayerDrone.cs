@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Input;
 using Unity.Mathematics;
@@ -29,7 +30,6 @@ public class PlayerDrone : MonoBehaviour
     private float torqueX, torqueY, torqueZ;
     private float forceX, forceY, forceZ;
 
-    private bool inLimitPitch, inLimitRoll;
     
 
     [Header("Flight Assist")]
@@ -37,7 +37,10 @@ public class PlayerDrone : MonoBehaviour
     [SerializeField] private float flightAssist;
     [SerializeField] private float rollDeadZone;
     [SerializeField] private float pitchDeadZone;
+    [SerializeField] private float rollLimit;
+    [SerializeField] private float pitchLimit;
     [SerializeField] private float dragCoefficient;
+    [SerializeField] private float limitCoefficient;
 
    
 
@@ -71,7 +74,7 @@ public class PlayerDrone : MonoBehaviour
        var yaw = droneThrottle.x;
        var throttle = droneThrottle.y;
        
-       DroneFlightLimit(45,45);
+     
 
        DronePitchRoll(pitch,roll);
        DroneEngineYaw(idleThrust,throttle,yaw);
@@ -98,10 +101,10 @@ public class PlayerDrone : MonoBehaviour
 
     void DronePitchRoll(float pitch, float roll)
     {
-       if(inLimitRoll){torqueZ = -roll*rollRate;}
-       if(inLimitPitch){torqueX = pitch*pitchRate;}
+       torqueZ = -roll*rollRate*(1/(1+Mathf.Exp(limitCoefficient*(transform.rotation.eulerAngles.z-rollLimit))));
+       torqueX = pitch*pitchRate;
 
-       Debug.Log(inLimitPitch);
+      
     }
 
     void DroneEngineYaw(float idleThrust, float throttle, float yaw)
@@ -151,7 +154,7 @@ public class PlayerDrone : MonoBehaviour
             
         }
         
-        //if(Mathf.Approximately(transform.rotation.eulerAngles.x,0)  && pitch == 0){rb.AddTorque(new Vector3(0,0,0));}
+     
         
        
        
@@ -184,45 +187,7 @@ public class PlayerDrone : MonoBehaviour
 
 
     }
-    void DroneFlightLimit(float pitchLimit, float rollLimit)
-    {
-        if(transform.rotation.eulerAngles.x <= 180f && transform.rotation.eulerAngles.x > pitchLimit)
-        {
-            inLimitPitch = false;
-            
-            torqueX = 0;
-        }
-        else if(transform.rotation.eulerAngles.x > 180f && transform.rotation.eulerAngles.x < 360f - pitchLimit)
-        {
-            inLimitPitch = false;
-            
-            torqueX = 0;
 
-        }
-        else
-        {
-            inLimitPitch = true;
-        }
-
-
-        
-        if(transform.rotation.eulerAngles.z <= 180f && transform.rotation.eulerAngles.z > rollLimit)
-        {
-            inLimitRoll = false;
-        }
-        else if(transform.rotation.eulerAngles.z > 180f && transform.rotation.eulerAngles.z < 360f - rollLimit)
-        {
-            inLimitRoll = false;
-
-        }
-        else
-        {
-            inLimitRoll = true;
-        }
-
-
-    }
-    
 
 
 
