@@ -1,12 +1,8 @@
-using UnityEngine;
-
 namespace InventorySystem.Items
 {
-    public class Scrap : MonoBehaviour, IPickable
+    public class Scrap : HighlightableAndPickableItem
     {
-        public ItemTypes itemType = ItemTypes.Scrap;
-        
-        public void PickUp()
+        public override void PickUp()
         {
             Destroy(gameObject);
         }

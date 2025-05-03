@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace InventorySystem
 {
@@ -36,6 +37,7 @@ namespace InventorySystem
         {
             if (_items.TryAdd(type, amount))
             {
+                Debug.Log($"{type} = {_items[type]}");
                 return;
             }
             
