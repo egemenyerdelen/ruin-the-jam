@@ -37,6 +37,7 @@ namespace UI
 
         public void OpenUpgradeMenu()
         {
+            Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             
             upgradeMenu.SetActive(true);
@@ -44,6 +45,7 @@ namespace UI
 
         public void CloseUpgradeMenu()
         {
+            Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             
             upgradeMenu.SetActive(false);

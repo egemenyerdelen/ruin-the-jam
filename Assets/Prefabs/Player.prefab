@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8622609174606337578}
   - component: {fileID: 6500549252856389457}
   - component: {fileID: 3162094164854268367}
-  - component: {fileID: 1209610783623418617}
   - component: {fileID: 9031217565652641513}
   m_Layer: 0
   m_Name: Player
@@ -63,7 +62,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!114 &6500549252856389457
 MonoBehaviour:
@@ -91,24 +90,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d840ffdaaa4cd89b9553e1f237e09c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1209610783623418617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2004949611359372643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e924a7b785a4da3839b20b77de2ccbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerDataHolder: {fileID: 0}
-  maxDetectDistance: 5
-  pickableLayer:
-    serializedVersion: 2
-    m_Bits: 1
-  cameraTransform: {fileID: 6050476617445701453}
 --- !u!114 &9031217565652641513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,6 +106,7 @@ MonoBehaviour:
   interactableLayer:
     serializedVersion: 2
     m_Bits: 1
+  playerCameraTransform: {fileID: 6050476617445701453}
 --- !u!1 &6360144701089544061
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,6 +120,7 @@ GameObject:
   - component: {fileID: 2777557275099452451}
   - component: {fileID: 4016047154801117031}
   - component: {fileID: 340065681396150053}
+  - component: {fileID: 4162182339739734310}
   m_Layer: 0
   m_Name: Player Camera
   m_TagString: MainCamera
@@ -278,6 +261,20 @@ MonoBehaviour:
   playerMovement: {fileID: 6500549252856389457}
   bobFrequency: 7
   bobAmplitude: 0.075
+--- !u!114 &4162182339739734310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6360144701089544061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb248f633f87433283b74fff5b7a611f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseSensitivity: 20
+  playerObject: {fileID: 2004949611359372643}
 --- !u!1 &7732350434412458745
 GameObject:
   m_ObjectHideFlags: 0

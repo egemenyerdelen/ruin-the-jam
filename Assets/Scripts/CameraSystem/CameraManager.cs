@@ -11,34 +11,34 @@ namespace CameraSystem
 
         public void EnableMainCamera()
         {
-            mainCamera.gameObject.SetActive(true);
-            playerCamera.gameObject.SetActive(false);
-            droneCamera.gameObject.SetActive(false);
-            upgradeTableCamera.gameObject.SetActive(false);
+            mainCamera.enabled = true;
+            playerCamera.enabled = false;
+            droneCamera.enabled = false;
+            upgradeTableCamera.enabled = false;
         }
         
         public void EnablePlayerCamera()
         {
-            mainCamera.gameObject.SetActive(false);
-            playerCamera.gameObject.SetActive(true);
-            droneCamera.gameObject.SetActive(false);
-            upgradeTableCamera.gameObject.SetActive(false);
+            playerCamera.enabled = true;
+            mainCamera.enabled = false;
+            droneCamera.enabled = false;
+            upgradeTableCamera.enabled = false;
         }
         
         public void EnableDroneCamera()
         {
-            mainCamera.gameObject.SetActive(false);
-            playerCamera.gameObject.SetActive(false);
-            droneCamera.gameObject.SetActive(true);
-            upgradeTableCamera.gameObject.SetActive(false);
+            droneCamera.enabled = true;
+            mainCamera.enabled = false;
+            playerCamera.enabled = false;
+            upgradeTableCamera.enabled = false;
         }
         
         public void EnableUpgradeCamera()
         {
-            mainCamera.gameObject.SetActive(false);
-            playerCamera.gameObject.SetActive(false);
-            droneCamera.gameObject.SetActive(false);
-            upgradeTableCamera.gameObject.SetActive(true);
+            upgradeTableCamera.enabled = true;
+            mainCamera.enabled = false;
+            playerCamera.enabled = false;
+            droneCamera.enabled = false;
         }
     }
 }
