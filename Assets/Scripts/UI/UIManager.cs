@@ -1,4 +1,5 @@
 using System;
+using CameraSystem;
 using Core;
 using Helpers;
 using Input;
@@ -14,6 +15,8 @@ namespace UI
 
         //public GameObject inGameMenu;
         public GameObject pauseMenu;
+
+        public GameObject upgradeMenu;
 
         private InputSystem_Actions _inputActions;
 
@@ -32,6 +35,20 @@ namespace UI
             _inputActions.UI.SpaceBar.performed -= HandleSpaceBar;
         }
 
+        public void OpenUpgradeMenu()
+        {
+            Cursor.visible = true;
+            
+            upgradeMenu.SetActive(true);
+        }
+
+        public void CloseUpgradeMenu()
+        {
+            Cursor.visible = false;
+            
+            upgradeMenu.SetActive(false);
+        }
+        
         public void StartGame()
         {
             // inGameMenu.SetActive(true);
@@ -74,9 +91,14 @@ namespace UI
 
     private void HandleEscButton(InputAction.CallbackContext obj)
         {
-            if (startScreen.activeSelf)
-            {
+            if (startScreen.activeSelf) 
                 QuitGame();
+
+            if (upgradeMenu.activeSelf)
+            {
+                CameraManager.Instance.EnablePlayerCamera();
+                CloseUpgradeMenu();
+                return;
             }
             
             switch (GameManager.ActiveGameState)
