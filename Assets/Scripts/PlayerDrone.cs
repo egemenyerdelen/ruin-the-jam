@@ -61,7 +61,14 @@ public class PlayerDrone : MonoBehaviour
        var roll = droneAxis.x;
 
        DroneControls(pitch,roll);
-       DroneFlightAssist(pitch,roll,flightAssist,pitchDeadZone,rollDeadZone);
+      
+       
+       
+       
+       
+       
+       
+       //DroneFlightAssist(pitch,roll,flightAssist,pitchDeadZone,rollDeadZone);
         
 
     }
