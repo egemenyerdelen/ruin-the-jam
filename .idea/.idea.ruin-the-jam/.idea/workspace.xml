@@ -5,19 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5804334a-21f4-49c2-8d6a-41d95185380c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Camera Render Texture.renderTexture" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Camera Render Texture.renderTexture.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ruin-the-jam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ruin-the-jam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Materials/Drone Battery.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PBR Racing Drone/Materials/Drone Battery.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Materials/Drone Cam.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PBR Racing Drone/Materials/Drone Cam.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Materials/Drone Chassis.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PBR Racing Drone/Materials/Drone Chassis.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Materials/Drone Motor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PBR Racing Drone/Materials/Drone Motor.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Materials/Wing Parts.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PBR Racing Drone/Materials/Wing Parts.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Drone.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Drone.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Environment.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Environment.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Generals.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Generals.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraSystem/CameraManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraSystem/CameraManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +112,7 @@
       <updated>1746226041656</updated>
       <workItem from="1746226042823" duration="16365000" />
       <workItem from="1746263560376" duration="14416000" />
-      <workItem from="1746283689081" duration="16297000" />
+      <workItem from="1746283689081" duration="16900000" />
     </task>
     <servers />
   </component>
