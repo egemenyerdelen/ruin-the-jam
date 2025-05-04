@@ -197,6 +197,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activeController: 0
+  Drone: {fileID: 0}
+  Player: {fileID: 0}
+--- !u!1 &8247374661506728617
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2962393494174632482}
+  - component: {fileID: 6299407186642895611}
+  m_Layer: 0
+  m_Name: Ugrade Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2962393494174632482
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8247374661506728617}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4997410826264172139}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6299407186642895611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8247374661506728617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92e6c296cf5340a479d1df1a325e2280, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drone: {fileID: 0}
+  player: {fileID: 0}
+  playerDataHolder: {fileID: 0}
 --- !u!1 &8779632654787714249
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,6 +255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4997410826264172139}
+  - component: {fileID: 1015680878929262518}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -230,5 +280,21 @@ Transform:
   - {fileID: 3734859494617101045}
   - {fileID: 4857215056218926103}
   - {fileID: 7812888737703587863}
+  - {fileID: 2962393494174632482}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1015680878929262518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8779632654787714249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92e6c296cf5340a479d1df1a325e2280, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drone: {fileID: 0}
+  player: {fileID: 0}
+  playerDataHolder: {fileID: 0}
