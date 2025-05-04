@@ -1,7 +1,9 @@
 using Input;
 using InventorySystem;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerDrone : MonoBehaviour
@@ -10,6 +12,8 @@ public class PlayerDrone : MonoBehaviour
     public int scrapHolding;
     
     private Rigidbody rb;
+
+    private BoxCollider coll;
     private InputSystem_Actions inputActions;
 
     private Vector3 droneAxis;
@@ -54,6 +58,8 @@ public class PlayerDrone : MonoBehaviour
     void Start()
     {
         inputActions = InputManager.InputSystem;
+
+        coll = gameObject.GetComponent<BoxCollider>();
        
         rb = GetComponent<Rigidbody>();
         battery = batteryCap;
@@ -249,10 +255,16 @@ public class PlayerDrone : MonoBehaviour
     ///
     ///UPGRADE METHODLAR
     /// 
-    
- 
 
-    
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Ground"))
+        {
+            SceneManager.LoadScene(0);
+        }
+    }
 
 }
  
