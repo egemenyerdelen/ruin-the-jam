@@ -617,6 +617,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8d00253a129ad2459960ec053a7fc32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scrapCapacity: 2
+  scrapHolding: 0
   batteryCap: 100
   HUD: {fileID: 0}
   BatteryHUD:
@@ -624,6 +626,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  battery: 0
   idleThrust: 9.8
   maxThrust: 4
   rollRate: 0.2
@@ -648,6 +651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88b4a9441a24ad1acfee4f8d4885c2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  droneScript: {fileID: 9169103961518822652}
   canInteract: 1
   maxDetectDistance: 5
   interactableLayer:

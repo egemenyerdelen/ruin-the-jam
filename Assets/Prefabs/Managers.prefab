@@ -209,6 +209,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2962393494174632482}
   - component: {fileID: 6299407186642895611}
+  - component: {fileID: 4525606742669852415}
   m_Layer: 0
   m_Name: Ugrade Manager
   m_TagString: Untagged
@@ -245,7 +246,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drone: {fileID: 0}
   player: {fileID: 0}
-  playerDataHolder: {fileID: 0}
+  dataHolder: {fileID: 4525606742669852415}
+--- !u!114 &4525606742669852415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8247374661506728617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3d840ffdaaa4cd89b9553e1f237e09c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8779632654787714249
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,4 +310,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drone: {fileID: 0}
   player: {fileID: 0}
-  playerDataHolder: {fileID: 0}
+  dataHolder: {fileID: 0}
