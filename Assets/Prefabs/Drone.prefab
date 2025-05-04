@@ -475,6 +475,7 @@ GameObject:
   - component: {fileID: 7049303148258073272}
   - component: {fileID: 7348782870230794649}
   - component: {fileID: 9169103961518822652}
+  - component: {fileID: 7716437154257579174}
   m_Layer: 0
   m_Name: Drone
   m_TagString: Untagged
@@ -616,11 +617,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8d00253a129ad2459960ec053a7fc32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleThrust: 9
+  batteryCap: 100
+  HUD: {fileID: 0}
+  BatteryHUD:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  idleThrust: 9.8
   maxThrust: 4
-  rollRate: 0.1
-  pitchRate: 0.1
-  yawRate: 0.1
+  rollRate: 0.2
+  pitchRate: 0.15
+  yawRate: 0.5
   flightAssist: 0.2
   rollDeadZone: 0.5
   pitchDeadZone: 0.5
@@ -628,6 +636,24 @@ MonoBehaviour:
   pitchLimit: 0
   dragCoefficient: 1
   limitCoefficient: 0
+--- !u!114 &7716437154257579174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6984643090938789060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b88b4a9441a24ad1acfee4f8d4885c2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canInteract: 1
+  maxDetectDistance: 5
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 1
+  playerCameraTransform: {fileID: 4520085153355352130}
 --- !u!1 &8396303160876353971
 GameObject:
   m_ObjectHideFlags: 0
