@@ -50,7 +50,8 @@ public class PlayerDrone : MonoBehaviour
     
     void Start()
     {
-        CreateInputSystem();
+        inputActions = InputManager.InputSystem;
+       
         rb = GetComponent<Rigidbody>();
         battery = batteryCap;
     }
@@ -58,17 +59,52 @@ public class PlayerDrone : MonoBehaviour
     void OnEnable()
     {
         
+       
     }
 
     void OnDisable()
     {
+        
+        DisableInputSystem();
+        
+    }
+    
+    //INPUT SYSTEM
+    public void EnableInputSystem()
+    {
+        inputActions.Drone.Enable();
+        inputActions.Drone.Flight.performed += FlightPhys;
+        inputActions.Drone.Flight.canceled += ctx => droneAxis = Vector3.zero;
+
+        inputActions.Drone.Thrust.performed += Thrust;
+        inputActions.Drone.Thrust.canceled += ctx => droneThrottle = Vector2.zero;
+    }
+
+    public void DisableInputSystem()
+    {
+        inputActions.Drone.Disable();
         inputActions.Drone.Flight.performed -= FlightPhys;
         inputActions.Drone.Flight.canceled -= ctx => droneAxis = Vector3.zero;
 
         inputActions.Drone.Thrust.performed -= Thrust;
         inputActions.Drone.Thrust.canceled -= ctx => droneThrottle = Vector2.zero;
-        
     }
+    
+
+    void FlightPhys(InputAction.CallbackContext context)
+    {
+        droneAxis = context.ReadValue<Vector3>();
+
+    }
+
+    void Thrust(InputAction.CallbackContext context)
+    {
+        droneThrottle = context.ReadValue<Vector2>();
+
+    }
+
+    /// 
+    
 
 
     void Update()
@@ -227,35 +263,5 @@ public class PlayerDrone : MonoBehaviour
 
     
 
-    void CreateInputSystem()
-    {
-        inputActions = InputManager.InputSystem;
-        
-        // inputActions.Drone.Enable();
-
-        inputActions.Drone.Flight.performed += FlightPhys;
-        inputActions.Drone.Flight.canceled += ctx => droneAxis = Vector3.zero;
-
-        inputActions.Drone.Thrust.performed += Thrust;
-        inputActions.Drone.Thrust.canceled += ctx => droneThrottle = Vector2.zero;
-        
-
-
-        
-
-
-    }
-
-    void FlightPhys(InputAction.CallbackContext context)
-    {
-        droneAxis = context.ReadValue<Vector3>();
-
-    }
-
-    void Thrust(InputAction.CallbackContext context)
-    {
-        droneThrottle = context.ReadValue<Vector2>();
-
-    }
 }
  
