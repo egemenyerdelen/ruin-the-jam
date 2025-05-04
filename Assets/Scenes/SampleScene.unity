@@ -244,6 +244,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27f3325813c95e94298843e06aee2460, type: 3}
+--- !u!1 &796532932 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6984643090938789060, guid: 27f3325813c95e94298843e06aee2460, type: 3}
+  m_PrefabInstance: {fileID: 796532931}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &955322121 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2757506479860091467, guid: b148a314d9a37974593590ca45ef343e, type: 3}
@@ -428,17 +433,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &1893707894 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9169103961518822652, guid: 27f3325813c95e94298843e06aee2460, type: 3}
-  m_PrefabInstance: {fileID: 796532931}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8d00253a129ad2459960ec053a7fc32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1998883118
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,7 +501,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outline: {fileID: 1998883120}
-  playerDrone: {fileID: 1893707894}
 --- !u!65 &1998883122
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -829,6 +822,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 323ab06c1144e5a4091f8dc9bb97200e, type: 3}
+--- !u!1 &3518327263068652659 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2004949611359372643, guid: 323ab06c1144e5a4091f8dc9bb97200e, type: 3}
+  m_PrefabInstance: {fileID: 3518327263068652658}
+  m_PrefabAsset: {fileID: 0}
 --- !u!20 &3518327263068652671 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 469102466817864711, guid: 323ab06c1144e5a4091f8dc9bb97200e, type: 3}
@@ -882,6 +880,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6004021267064342421, guid: cb898d9b0f3ba1b4c909adb33f4bcf0c, type: 3}
+      propertyPath: Drone
+      value: 
+      objectReference: {fileID: 796532932}
+    - target: {fileID: 6004021267064342421, guid: cb898d9b0f3ba1b4c909adb33f4bcf0c, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 3518327263068652659}
     - target: {fileID: 7891993900572490138, guid: cb898d9b0f3ba1b4c909adb33f4bcf0c, type: 3}
       propertyPath: pauseMenu
       value: 
