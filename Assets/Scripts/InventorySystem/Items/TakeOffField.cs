@@ -24,8 +24,8 @@ namespace InventorySystem.Items
                 
                 case ControllerType.Drone:
                     
-                    UpgradeManager.Instance.dataHolder.inventory.Add(ItemTypes.Scrap, playerDrone.scrapHolding);
-                    playerDrone.scrapHolding = 0;
+                    // UpgradeManager.Instance.dataHolder.inventory.Add(ItemTypes.Scrap, playerDrone.scrapHolding);
+                    // playerDrone.scrapHolding = 0;
                     inputSwitcher.SwitchController(ControllerType.Player);
                     CameraManager.Instance.SwitchPlayerCamera();
                     break;

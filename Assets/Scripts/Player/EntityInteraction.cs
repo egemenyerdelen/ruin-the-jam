@@ -18,6 +18,7 @@ namespace Player
         private HighlightableItem _highlightableTarget;
         private IInteractable _interactableTarget;
         private HighlightableAndPickableItem _pickableTarget;
+        private int _scrapHolding;
 
         private void Update()
         {
@@ -28,7 +29,7 @@ namespace Player
             if (InputManager.InputSystem.Player.Interact.IsPressed() && InputSwitcher.Instance.activeController == ControllerType.Player)
             {
                 _interactableTarget?.Interact();
-                _pickableTarget?.PickUp();
+                // _pickableTarget?.PickUp();
             }
             if (InputManager.InputSystem.Drone.Interact.IsPressed() && InputSwitcher.Instance.activeController == ControllerType.Drone)
             {
@@ -36,13 +37,17 @@ namespace Player
 
                 if (_pickableTarget == null) return;
                 
-                var typeCountMatch = _pickableTarget.GetItemDataMatch();
-                if (droneScript.scrapHolding >= droneScript.scrapCapacity) return;
+                // var typeCountMatch = _pickableTarget.GetItemDataMatch();
+                if (_scrapHolding >= droneScript.scrapCapacity) return;
 
                 AudioManager.Instance.PlaySoundFX("Scrap", 2);
-                droneScript.scrapHolding++;
+                UpgradeManager.Instance.dataHolder.inventory.Add(ItemTypes.Scrap, 1);
 
-
+                // _scrapHolding++;
+                // Debug.Log(_scrapHolding);
+                // Debug.Log(droneScript.scrapHolding);
+                // droneScript.scrapHolding = _scrapHolding;
+                
                 _pickableTarget.PickUp();
             }
         }

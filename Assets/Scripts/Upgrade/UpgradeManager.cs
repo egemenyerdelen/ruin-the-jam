@@ -39,7 +39,7 @@ namespace Upgrade
             if (!CanUpgrade(distanceUpgradeCost)) return;
             
             SpendScrap(distanceUpgradeCost);
-            playerDrone.distanceLimit = 100;
+            playerDrone.distanceLimit = 5000;
         }
 
         public void EngineUpgrade()
