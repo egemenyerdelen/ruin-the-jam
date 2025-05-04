@@ -606,21 +606,23 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  totalScrapT: {fileID: 0}
+  carriedScrapT: {fileID: 0}
   battery: 0
   idleThrust: 9.8
-  maxThrust: 4
-  rollRate: 0.2
-  pitchRate: 0.15
-  yawRate: 0.5
-  flightAssist: 1
-  rollDeadZone: 0.5
-  pitchDeadZone: 0.5
+  maxThrust: 6
+  rollRate: 0.25
+  pitchRate: 0.2
+  yawRate: 0.8
+  flightAssist: 0.8
+  rollDeadZone: 0.1
+  pitchDeadZone: 0.1
   rollLimit: 0
   pitchLimit: 0
   dragCoefficient: 1
   limitCoefficient: 0
-  basePosition: {x: -18, y: 3, z: 0}
-  rangeLimit: 100
+  basePosition: {x: -18, y: 0, z: 17}
+  rangeLimit: 120
 --- !u!114 &7716437154257579174
 MonoBehaviour:
   m_ObjectHideFlags: 0
