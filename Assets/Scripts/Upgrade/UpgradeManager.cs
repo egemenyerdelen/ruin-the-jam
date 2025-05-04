@@ -19,6 +19,7 @@ namespace Upgrade
 
         public void BatteryUpgrade()
         {
+            Debug.Log("BUTTON WORKED");
             if (!CanUpgrade(batteryUpgradeCost)) return;
 
             SpendScrap(batteryUpgradeCost);

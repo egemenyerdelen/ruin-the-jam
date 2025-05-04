@@ -40,7 +40,7 @@ namespace Player
                 if (droneScript.scrapHolding >= droneScript.scrapCapacity) return;
 
                 AudioManager.Instance.PlaySoundFX("Scrap", 2);
-                UpgradeManager.Instance.dataHolder.inventory.Add(typeCountMatch.ItemType, typeCountMatch.Count);
+                droneScript.scrapHolding++;
 
 
                 _pickableTarget.PickUp();
