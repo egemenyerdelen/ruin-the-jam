@@ -472,7 +472,6 @@ GameObject:
   - component: {fileID: 6117283760463627800}
   - component: {fileID: 5706521507375930093}
   - component: {fileID: 7312201626125545874}
-  - component: {fileID: 7049303148258073272}
   - component: {fileID: 7348782870230794649}
   - component: {fileID: 9169103961518822652}
   - component: {fileID: 7716437154257579174}
@@ -557,27 +556,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7049303148258073272
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6984643090938789060}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &7348782870230794649
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -619,6 +597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrapCapacity: 2
   scrapHolding: 0
+  distanceLimit: 0
   batteryCap: 100
   HUD: {fileID: 0}
   BatteryHUD:

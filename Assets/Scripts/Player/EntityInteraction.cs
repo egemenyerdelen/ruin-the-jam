@@ -1,6 +1,7 @@
 using Input;
 using InventorySystem;
 using UnityEngine;
+using Upgrade;
 
 namespace Player
 {
