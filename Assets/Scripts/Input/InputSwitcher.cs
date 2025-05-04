@@ -33,6 +33,11 @@ namespace Input
                 case ControllerType.Drone:
                     
                     Drone.GetComponent<PlayerDrone>().EnableInputSystem();
+                    Drone.GetComponent<PlayerDrone>().battery = Drone.GetComponent<PlayerDrone>().batteryCap;
+                    Drone.GetComponent<PlayerDrone>().BatteryHUD[0].gameObject.SetActive(true);
+                    Drone.GetComponent<PlayerDrone>().BatteryHUD[1].gameObject.SetActive(true);
+                    Drone.GetComponent<PlayerDrone>().BatteryHUD[2].gameObject.SetActive(true);
+                    Drone.GetComponent<PlayerDrone>().BatteryHUD[3].gameObject.SetActive(true);
                     Drone.GetComponent<PlayerInteractions>().canInteract = true;
                     
                     CameraManager.Instance.SwitchDroneCamera();

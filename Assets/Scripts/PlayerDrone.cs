@@ -12,32 +12,32 @@ public class PlayerDrone : MonoBehaviour
 
     private Vector2 droneThrottle;
 
-    [SerializeField] private float batteryCap;
+    [SerializeField] public float batteryCap;
 
     [SerializeField] private Canvas HUD;
-    [SerializeField] private RawImage[] BatteryHUD;
-    private float battery;
+    [SerializeField] public RawImage[] BatteryHUD;
+    public float battery;
     
 
     [Header("Flight Characteristics")]
     [SerializeField] private float idleThrust;
 
-    [SerializeField] private float maxThrust;
-    [SerializeField] private float rollRate;
-    [SerializeField] private float pitchRate;
-    [SerializeField] private float yawRate;
+    [SerializeField] public float maxThrust;
+    [SerializeField] public float rollRate;
+    [SerializeField] public float pitchRate;
+    [SerializeField] public float yawRate;
 
    
 
     [Header("Flight Assist")]
 
-    [SerializeField] private float flightAssist;
-    [SerializeField] private float rollDeadZone;
-    [SerializeField] private float pitchDeadZone;
-    [SerializeField] private float rollLimit;
-    [SerializeField] private float pitchLimit;
-    [SerializeField] private float dragCoefficient;
-    [SerializeField] private float limitCoefficient;
+    [SerializeField] public float flightAssist;
+    [SerializeField] public float rollDeadZone;
+    [SerializeField] public float pitchDeadZone;
+    [SerializeField] public float rollLimit;
+    [SerializeField] public float pitchLimit;
+    [SerializeField] public float dragCoefficient;
+    [SerializeField] public float limitCoefficient;
 
      private float torqueX, torqueY, torqueZ;
 
@@ -111,15 +111,17 @@ public class PlayerDrone : MonoBehaviour
        
        if(droneAxis.x != 0 || droneAxis.y != 0 || droneThrottle.x != 0 || droneAxis.y != 0){battery -= Time.deltaTime*2;}
 
-       if(battery < 75f && BatteryHUD[3].gameObject.activeSelf){BatteryHUD[3].gameObject.SetActive(false);}
-       if(battery < 50f && BatteryHUD[2].gameObject.activeSelf){BatteryHUD[2].gameObject.SetActive(false);}
-       if(battery < 25f && BatteryHUD[1].gameObject.activeSelf){BatteryHUD[1].gameObject.SetActive(false);}
+       if(battery/batteryCap < 0.75f && BatteryHUD[3].gameObject.activeSelf){BatteryHUD[3].gameObject.SetActive(false);}
+       if(battery/batteryCap < 0.50f && BatteryHUD[2].gameObject.activeSelf){BatteryHUD[2].gameObject.SetActive(false);}
+       if(battery/batteryCap < 0.25f && BatteryHUD[1].gameObject.activeSelf){BatteryHUD[1].gameObject.SetActive(false);}
        if(battery <= 0f && BatteryHUD[0].gameObject.activeSelf){BatteryHUD[1].gameObject.SetActive(false);}
-      
+       
+       
+        Debug.Log(battery/batteryCap);
 
 
        
-       
+
        
        var pitch = droneAxis.y;
        var roll = droneAxis.x;
@@ -240,24 +242,15 @@ public class PlayerDrone : MonoBehaviour
         torqueY = -rb.angularVelocity.y*flightAssist;
       
         
-        
-
-        
-        
-        
-        
-
-        
-
-        
-
-
-
     }
 
 
 
-
+    ///
+    ///UPGRADE METHODLAR
+    /// 
+    
+ 
 
     
 
