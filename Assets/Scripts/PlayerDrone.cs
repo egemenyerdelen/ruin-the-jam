@@ -20,6 +20,10 @@ public class PlayerDrone : MonoBehaviour
 
     [SerializeField] private Canvas HUD;
     [SerializeField] public RawImage[] BatteryHUD;
+
+    public int scrapCapacity;
+
+    public int scrapHolding;
     public float battery;
     
 
