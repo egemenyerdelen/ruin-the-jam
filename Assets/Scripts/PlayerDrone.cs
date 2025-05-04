@@ -154,7 +154,7 @@ public class PlayerDrone : MonoBehaviour
        var yaw = droneThrottle.x;
        var throttle = droneThrottle.y;
        
-     
+    ScrapHandlerUI();
 
     if(battery > 0)
     {
@@ -289,11 +289,13 @@ public class PlayerDrone : MonoBehaviour
 
     }
 
-    private void ScrapHandler()
+    private void ScrapHandlerUI()
     {
         int totalScrap = UpgradeManager.Instance.dataHolder.inventory.Get(ItemTypes.Scrap);
 
-        totalScrapT.text = "Total Scrap: " + totalScrapT;
+        totalScrapT.text = "Total Scrap: " + totalScrap;
+
+        carriedScrapT.text = "Scrap Carried: " + scrapHolding;
         
     }
 
