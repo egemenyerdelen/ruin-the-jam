@@ -11,8 +11,6 @@ public class UpgradeManager : Singleton<UpgradeManager>
     private PlayerDrone DR;
     [SerializeField] private GameObject player;
 
-    private int scrap_count;
-
     public EntityDataHolder dataHolder;
 
     private void Start()
@@ -25,5 +23,17 @@ public class UpgradeManager : Singleton<UpgradeManager>
 
         DR.batteryCap += 50;
     }
+
+    public void ScrapCapacity()
+    {
+
+        DR.scrapCapacity++;
+
+
+
+    }
+
+
+
 
 }

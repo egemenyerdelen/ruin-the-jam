@@ -41,7 +41,7 @@ namespace Player
                 }
                 else
                 {
-                    if (_currentTarget == null) return;
+                    if (_currentTarget == null){ return;}
                     
                     _currentTarget.DisableOutline();
                     _currentTarget = null;
