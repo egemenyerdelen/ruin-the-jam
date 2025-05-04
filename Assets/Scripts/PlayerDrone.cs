@@ -1,4 +1,5 @@
 using Audio;
+using Core;
 using Input;
 using InventorySystem;
 using UnityEngine;
@@ -274,9 +275,6 @@ public class PlayerDrone : MonoBehaviour
         pitchDeadZone = 0.1f + 90/(1+Mathf.Exp(rangeLimit-distance.magnitude));
 
         rollDeadZone = 0.1f + 90/(1+Mathf.Exp(rangeLimit-distance.magnitude));
-
-        Debug.Log(distance.magnitude);
-
 
 
 
