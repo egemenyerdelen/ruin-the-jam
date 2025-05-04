@@ -12,18 +12,16 @@ namespace InventorySystem.Items
         {
             var inputSwitcher = InputSwitcher.Instance;
 
-            Debug.Log(inputSwitcher);
-            Debug.Log(inputSwitcher.activeController);
             switch (inputSwitcher.activeController)
             {
                 case ControllerType.Player:
-                    playerDrone.enabled = false;
+                    playerDrone.enabled = true;
             
                     inputSwitcher.SwitchController(ControllerType.Drone);
                     CameraManager.Instance.SwitchDroneCamera();
                     break;
                 case ControllerType.Drone:
-                    playerDrone.enabled = true;
+                    playerDrone.enabled = false;
                 
                     inputSwitcher.SwitchController(ControllerType.Player);
                     CameraManager.Instance.SwitchPlayerCamera();

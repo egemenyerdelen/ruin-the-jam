@@ -6,16 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="5804334a-21f4-49c2-8d6a-41d95185380c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ruin-the-jam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ruin-the-jam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Material.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Managers.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Managers.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraSystem/CameraManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraSystem/CameraManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInteractions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInteractions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerLook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerLook.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Drone.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/Items/TakeOffField.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/Items/TakeOffField.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerDrone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerDrone.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Upgrade/UpgradeTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrade/UpgradeTable.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
