@@ -15,20 +15,14 @@ namespace Upgrade
         [SerializeField] private int batteryUpgradeCost;
         [SerializeField] private int distanceUpgradeCost;
         [SerializeField] private int engineUpgradeCost;
-    
-        private PlayerDrone _playerDrone;
-
-        private void Start()
-        {
-            drone.GetComponent<PlayerDrone>();
-        }
+        [SerializeField] private PlayerDrone playerDrone;
 
         public void BatteryUpgrade()
         {
             if (!CanUpgrade(batteryUpgradeCost)) return;
 
             SpendScrap(batteryUpgradeCost);
-            _playerDrone.batteryCap += 10;
+            playerDrone.batteryCap += 10;
         }
 
         public void CarryUpgrade()
@@ -36,7 +30,7 @@ namespace Upgrade
             if (!CanUpgrade(carryUpgradeCost)) return;
             
             SpendScrap(carryUpgradeCost);
-            _playerDrone.scrapCapacity++;
+            playerDrone.scrapCapacity++;
         }
 
         public void DistanceUpgrade()
@@ -44,16 +38,16 @@ namespace Upgrade
             if (!CanUpgrade(distanceUpgradeCost)) return;
             
             SpendScrap(distanceUpgradeCost);
-            _playerDrone.distanceLimit = 100;
+            playerDrone.distanceLimit = 100;
         }
 
         public void EngineUpgrade()
         {
             if (!CanUpgrade(engineUpgradeCost)) return;
-            if (_playerDrone.maxThrust >= 8) return;
+            if (playerDrone.maxThrust >= 8) return;
             
             SpendScrap(engineUpgradeCost);
-            _playerDrone.maxThrust += 2;
+            playerDrone.maxThrust += 2;
         }
 
         private bool CanUpgrade(int upgradeCost)
@@ -68,6 +62,5 @@ namespace Upgrade
             var activeCount = dataHolder.inventory.Get(ItemTypes.Scrap);
             dataHolder.inventory.Set(ItemTypes.Scrap, activeCount - upgradeCost);
         }
-
     }
 }

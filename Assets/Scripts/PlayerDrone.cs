@@ -119,7 +119,7 @@ public class PlayerDrone : MonoBehaviour
 
 
     void Update()
-    {
+    { 
         scrapHolding = UpgradeManager.Instance.dataHolder.inventory.Get(ItemTypes.Scrap);
         
        if(droneAxis.x != 0 || droneAxis.y != 0 || droneThrottle.x != 0 || droneAxis.y != 0){battery -= Time.deltaTime*2;}
