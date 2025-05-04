@@ -110,14 +110,14 @@ public class PlayerDrone : MonoBehaviour
     void Update()
     {
        
-       battery -= Time.deltaTime;
+       if(droneAxis.x != 0 || droneAxis.y != 0 || droneThrottle.x != 0 || droneAxis.y != 0){battery -= Time.deltaTime*2;}
 
        if(battery < 75f && BatteryHUD[3].gameObject.activeSelf){BatteryHUD[3].gameObject.SetActive(false);}
        if(battery < 50f && BatteryHUD[2].gameObject.activeSelf){BatteryHUD[2].gameObject.SetActive(false);}
        if(battery < 25f && BatteryHUD[1].gameObject.activeSelf){BatteryHUD[1].gameObject.SetActive(false);}
        if(battery <= 0f && BatteryHUD[0].gameObject.activeSelf){BatteryHUD[1].gameObject.SetActive(false);}
        
-
+        Debug.Log(battery);
 
 
        

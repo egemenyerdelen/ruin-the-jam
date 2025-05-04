@@ -20,11 +20,16 @@ namespace Player
 
         private void Update()
         {
-            if (!canInteract) return;
+            if (!canInteract) {return;}
             
             DetectInteraction();
 
             if (InputManager.InputSystem.Player.Interact.IsPressed())
+            {
+                _interactableTarget?.Interact();
+                _pickableTarget?.PickUp();
+            }
+            if (InputManager.InputSystem.Drone.Interact.IsPressed())
             {
                 _interactableTarget?.Interact();
                 _pickableTarget?.PickUp();
