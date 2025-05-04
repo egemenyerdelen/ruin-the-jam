@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5804334a-21f4-49c2-8d6a-41d95185380c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ruin-the-jam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ruin-the-jam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/Items/TakeOffField.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/Items/TakeOffField.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/EntityInteraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/EntityInteraction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Upgrade/UpgradeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrade/UpgradeManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CRT-Free/Scenes/Sample-CRT.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CRT-Free/Scenes/Sample-CRT.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +30,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6ce09342f8034704bcdf35e10f5a63d82b000/58/885fe4fb/Rigidbody.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CRT-Free/Scripts/CRTDemoBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraSystem/CameraManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerDrone.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Upgrade/UpgradeTable.cs" root0="FORCE_HIGHLIGHTING" />
