@@ -188,10 +188,11 @@ public class PlayerDrone : MonoBehaviour
     {
      
         rb.AddForce(new Vector3(forceX,forceY,forceZ));
-        rb.AddTorque(new Vector3(torqueX,torqueY,torqueZ));
+        
         rb.AddTorque(rollVec);
         rb.AddTorque(pitchVec);
         rb.AddTorque(yawVec);
+        rb.AddTorque(new Vector3(torqueX,torqueY,torqueZ));
        
 
         
@@ -278,9 +279,9 @@ public class PlayerDrone : MonoBehaviour
         
         var distance = new Vector3(transform.position.x,0,transform.position.z) - basePosition;
         
-        pitchDeadZone = 0.5f + 90/(1+0.5f*Mathf.Exp(rangeLimit-distance.magnitude));
+        pitchDeadZone = 0.1f + 90/(1+0.5f*Mathf.Exp(rangeLimit-distance.magnitude));
 
-        rollDeadZone = 0.5f + 90/(1+0.5f*Mathf.Exp(rangeLimit-distance.magnitude));
+        rollDeadZone = 0.1f + 90/(1+0.5f*Mathf.Exp(rangeLimit-distance.magnitude));
 
       
 
