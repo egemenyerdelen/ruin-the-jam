@@ -9,7 +9,7 @@ namespace Upgrade
         public void Interact()
         {
             UIManager.Instance.OpenUpgradeMenu();
-            CameraManager.Instance.EnableUpgradeCamera();
+            CameraManager.Instance.SwitchUpgradeCamera();
         }
     }
 }

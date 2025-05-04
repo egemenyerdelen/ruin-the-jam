@@ -1,5 +1,6 @@
 using System;
 using Helpers;
+using Input;
 using UnityEngine;
 
 namespace Core
@@ -38,6 +39,8 @@ namespace Core
         public static void StartGame()
         {
             ActiveGameState = GameState.Playing;
+            
+            InputSwitcher.Instance.SwitchController(ControllerType.Player);
         }
 
         public static void ResumeGame()
@@ -60,6 +63,7 @@ namespace Core
             
             // Will add upgrade menu and open it in here
         }
+        
     }
 
     public enum GameState

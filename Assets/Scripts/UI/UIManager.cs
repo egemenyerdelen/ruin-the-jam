@@ -98,7 +98,7 @@ namespace UI
 
             if (upgradeMenu.activeSelf)
             {
-                CameraManager.Instance.EnablePlayerCamera();
+                CameraManager.Instance.SwitchPlayerCamera();
                 CloseUpgradeMenu();
                 return;
             }

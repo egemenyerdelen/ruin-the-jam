@@ -8,6 +8,8 @@ namespace Player
 {
     public class PlayerInteractions : MonoBehaviour
     {
+        public bool canInteract = true;
+        
         [SerializeField] private float maxDetectDistance = 5f;
         [SerializeField] private LayerMask interactableLayer;
         [SerializeField] private Transform playerCameraTransform;
@@ -18,6 +20,8 @@ namespace Player
 
         private void Update()
         {
+            if (!canInteract) return;
+            
             DetectInteraction();
 
             if (InputManager.InputSystem.Player.Interact.IsPressed())

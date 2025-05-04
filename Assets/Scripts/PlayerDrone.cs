@@ -1,11 +1,5 @@
-using System;
-using System.Collections;
 using Input;
-using Unity.Mathematics;
-using Unity.VisualScripting.FullSerializer;
-using Unity.VisualScripting.ReorderableList.Element_Adder_Menu;
 using UnityEngine;
-using UnityEngine.Animations;
 using UnityEngine.InputSystem;
 
 public class PlayerDrone : MonoBehaviour
@@ -210,7 +204,7 @@ public class PlayerDrone : MonoBehaviour
     {
         inputActions = InputManager.InputSystem;
         
-        inputActions.Drone.Enable();
+        // inputActions.Drone.Enable();
 
         inputActions.Drone.Flight.performed += FlightPhys;
         inputActions.Drone.Flight.canceled += ctx => droneAxis = Vector3.zero;
@@ -236,9 +230,5 @@ public class PlayerDrone : MonoBehaviour
         droneThrottle = context.ReadValue<Vector2>();
 
     }
-
-
-
-    
 }
  

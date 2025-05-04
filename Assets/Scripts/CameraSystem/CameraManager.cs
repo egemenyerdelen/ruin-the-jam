@@ -9,7 +9,7 @@ namespace CameraSystem
         public UnityEngine.Camera droneCamera;
         public UnityEngine.Camera upgradeTableCamera;
 
-        public void EnableMainCamera()
+        public void SwitchMainCamera()
         {
             mainCamera.enabled = true;
             playerCamera.enabled = false;
@@ -17,7 +17,7 @@ namespace CameraSystem
             upgradeTableCamera.enabled = false;
         }
         
-        public void EnablePlayerCamera()
+        public void SwitchPlayerCamera()
         {
             playerCamera.enabled = true;
             mainCamera.enabled = false;
@@ -25,7 +25,7 @@ namespace CameraSystem
             upgradeTableCamera.enabled = false;
         }
         
-        public void EnableDroneCamera()
+        public void SwitchDroneCamera()
         {
             droneCamera.enabled = true;
             mainCamera.enabled = false;
@@ -33,7 +33,7 @@ namespace CameraSystem
             upgradeTableCamera.enabled = false;
         }
         
-        public void EnableUpgradeCamera()
+        public void SwitchUpgradeCamera()
         {
             upgradeTableCamera.enabled = true;
             mainCamera.enabled = false;
