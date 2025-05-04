@@ -2,6 +2,8 @@ using Audio;
 using Core;
 using Input;
 using InventorySystem;
+using InventorySystem.Items;
+using Player;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -27,6 +29,8 @@ public class PlayerDrone : MonoBehaviour
 
     [SerializeField] private Canvas HUD;
     [SerializeField] public RawImage[] BatteryHUD;
+    [SerializeField] private Text totalScrapT;
+    [SerializeField] private Text carriedScrapT;
     public float battery;
     
 
@@ -58,7 +62,9 @@ public class PlayerDrone : MonoBehaviour
     [SerializeField] Vector3 basePosition;
 
     [SerializeField] float rangeLimit;
- 
+    
+
+    
    
 
     
@@ -272,18 +278,23 @@ public class PlayerDrone : MonoBehaviour
         
         var distance = new Vector3(transform.position.x,0,transform.position.z) - basePosition;
         
-        pitchDeadZone = 0.1f + 90/(1+Mathf.Exp(rangeLimit-distance.magnitude));
+        pitchDeadZone = 0.5f + 90/(1+0.5f*Mathf.Exp(rangeLimit-distance.magnitude));
 
-        rollDeadZone = 0.1f + 90/(1+Mathf.Exp(rangeLimit-distance.magnitude));
+        rollDeadZone = 0.5f + 90/(1+0.5f*Mathf.Exp(rangeLimit-distance.magnitude));
+
+      
 
 
 
     }
 
-    ///
-    ///UPGRADE METHODLAR
-    /// 
+    private void ScrapHandler()
+    {
+        int totalScrap = UpgradeManager.Instance.dataHolder.inventory.Get(ItemTypes.Scrap);
 
+        totalScrapT.text = "Total Scrap: " + totalScrapT;
+        
+    }
 
 
     private void OnCollisionEnter(Collision collision)
@@ -293,6 +304,8 @@ public class PlayerDrone : MonoBehaviour
             GameManager.EndLevel();
         }
     }
+
+    
 
 }
  
