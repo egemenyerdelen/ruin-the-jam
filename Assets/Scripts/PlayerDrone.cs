@@ -7,6 +7,8 @@ using Unity.VisualScripting.ReorderableList.Element_Adder_Menu;
 using UnityEngine;
 using UnityEngine.Animations;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.UI;
 
 public class PlayerDrone : MonoBehaviour
 {
@@ -18,6 +20,9 @@ public class PlayerDrone : MonoBehaviour
     private Vector2 droneThrottle;
 
     [SerializeField] private float batteryCap;
+
+    [SerializeField] private Canvas HUD;
+    [SerializeField] private RawImage[] BatteryHUD;
     private float battery;
     
 
@@ -76,6 +81,15 @@ public class PlayerDrone : MonoBehaviour
     {
        
        battery -= Time.deltaTime;
+
+       if(battery < 75f && BatteryHUD[3].gameObject.activeSelf){BatteryHUD[3].gameObject.SetActive(false);}
+       if(battery < 50f && BatteryHUD[2].gameObject.activeSelf){BatteryHUD[2].gameObject.SetActive(false);}
+       if(battery < 25f && BatteryHUD[1].gameObject.activeSelf){BatteryHUD[1].gameObject.SetActive(false);}
+       if(battery <= 0f && BatteryHUD[0].gameObject.activeSelf){BatteryHUD[1].gameObject.SetActive(false);}
+       
+
+
+
        
        
        
@@ -86,12 +100,25 @@ public class PlayerDrone : MonoBehaviour
        
      
 
+    if(battery > 0)
+    {
        DronePitchRoll(pitch,roll);
        DroneEngineYaw(idleThrust,throttle,yaw);
+    }
+    else
+    {
+        forceX = 0;
+        forceY = 0;
+        forceZ = 0;
+    }
 
-       AirDrag(dragCoefficient);
+      
        
        DroneFlightAssist(pitch,roll,flightAssist,pitchDeadZone,rollDeadZone);
+
+
+
+        AirDrag(dragCoefficient);
        
 
 
