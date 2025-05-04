@@ -13,7 +13,7 @@ public class UpgradeManager : Singleton<UpgradeManager>
 
     private int scrap_count;
 
-    public EntityDataHolder playerDataHolder;
+    public EntityDataHolder dataHolder;
 
     private void Start()
     {

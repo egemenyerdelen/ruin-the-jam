@@ -37,7 +37,7 @@ namespace InventorySystem
         {
             if (_items.TryAdd(type, amount))
             {
-                Debug.Log($"{type} = {_items[type]}");
+                // Debug.Log($"{type} = {_items[type]}");
                 return;
             }
             

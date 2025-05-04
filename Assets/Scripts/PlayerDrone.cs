@@ -1,10 +1,14 @@
 using Input;
+using InventorySystem;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class PlayerDrone : MonoBehaviour
 {
+    public int scrapCapacity;
+    public int scrapHolding;
+    
     private Rigidbody rb;
     private InputSystem_Actions inputActions;
 
@@ -108,18 +112,14 @@ public class PlayerDrone : MonoBehaviour
 
     void Update()
     {
-       
+        scrapHolding = UpgradeManager.Instance.dataHolder.inventory.Get(ItemTypes.Scrap);
+        
        if(droneAxis.x != 0 || droneAxis.y != 0 || droneThrottle.x != 0 || droneAxis.y != 0){battery -= Time.deltaTime*2;}
 
        if(battery/batteryCap < 0.75f && BatteryHUD[3].gameObject.activeSelf){BatteryHUD[3].gameObject.SetActive(false);}
        if(battery/batteryCap < 0.50f && BatteryHUD[2].gameObject.activeSelf){BatteryHUD[2].gameObject.SetActive(false);}
        if(battery/batteryCap < 0.25f && BatteryHUD[1].gameObject.activeSelf){BatteryHUD[1].gameObject.SetActive(false);}
        if(battery <= 0f && BatteryHUD[0].gameObject.activeSelf){BatteryHUD[1].gameObject.SetActive(false);}
-       
-       
-        Debug.Log(battery/batteryCap);
-
-
        
 
        

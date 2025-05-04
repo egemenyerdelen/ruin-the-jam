@@ -22,12 +22,12 @@ namespace Input
                 case ControllerType.Player:
                     
                     Player.GetComponent<PlayerMovementWithRigidbody>().EnableInputSystem();
-                    Player.GetComponent<PlayerInteractions>().canInteract = true;
+                    Player.GetComponent<EntityInteraction>().canInteract = true;
                     
                     CameraManager.Instance.SwitchPlayerCamera();
 
                     Drone.GetComponent<PlayerDrone>().DisableInputSystem();
-                    Drone.GetComponent<PlayerInteractions>().canInteract = false;
+                    Drone.GetComponent<EntityInteraction>().canInteract = false;
 
                     break;
                 case ControllerType.Drone:
@@ -38,12 +38,12 @@ namespace Input
                     Drone.GetComponent<PlayerDrone>().BatteryHUD[1].gameObject.SetActive(true);
                     Drone.GetComponent<PlayerDrone>().BatteryHUD[2].gameObject.SetActive(true);
                     Drone.GetComponent<PlayerDrone>().BatteryHUD[3].gameObject.SetActive(true);
-                    Drone.GetComponent<PlayerInteractions>().canInteract = true;
+                    Drone.GetComponent<EntityInteraction>().canInteract = true;
                     
                     CameraManager.Instance.SwitchDroneCamera();
 
                     Player.GetComponent<PlayerMovementWithRigidbody>().DisableInputSystem();
-                    Player.GetComponent<PlayerInteractions>().canInteract = false;
+                    Player.GetComponent<EntityInteraction>().canInteract = false;
 
                     break;
                 default:

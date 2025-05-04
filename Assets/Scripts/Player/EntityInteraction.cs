@@ -1,13 +1,12 @@
-using System;
-using CameraSystem;
 using Input;
 using InventorySystem;
 using UnityEngine;
 
 namespace Player
 {
-    public class PlayerInteractions : MonoBehaviour
+    public class EntityInteraction : MonoBehaviour
     {
+        public PlayerDrone droneScript;
         public bool canInteract = true;
         
         [SerializeField] private float maxDetectDistance = 5f;
@@ -16,7 +15,7 @@ namespace Player
 
         private HighlightableItem _highlightableTarget;
         private IInteractable _interactableTarget;
-        private IPickable _pickableTarget;
+        private HighlightableAndPickableItem _pickableTarget;
 
         private void Update()
         {
@@ -24,15 +23,22 @@ namespace Player
             
             DetectInteraction();
 
-            if (InputManager.InputSystem.Player.Interact.IsPressed())
+            if (InputManager.InputSystem.Player.Interact.IsPressed() && InputSwitcher.Instance.activeController == ControllerType.Player)
             {
                 _interactableTarget?.Interact();
                 _pickableTarget?.PickUp();
             }
-            if (InputManager.InputSystem.Drone.Interact.IsPressed())
+            if (InputManager.InputSystem.Drone.Interact.IsPressed() && InputSwitcher.Instance.activeController == ControllerType.Drone)
             {
                 _interactableTarget?.Interact();
-                _pickableTarget?.PickUp();
+
+                if (_pickableTarget == null) return;
+                
+                var typeCountMatch = _pickableTarget.GetItemDataMatch();
+                if (droneScript.scrapHolding >= droneScript.scrapCapacity) return;
+                
+                UpgradeManager.Instance.dataHolder.inventory.Add(typeCountMatch.ItemType, typeCountMatch.Count);
+                _pickableTarget.PickUp();
             }
         }
         
@@ -61,7 +67,7 @@ namespace Player
                         _interactableTarget = interactable;
                     }
                     
-                    if (_highlightableTarget is IPickable pickableObject)
+                    if (_highlightableTarget is HighlightableAndPickableItem pickableObject)
                     {
                         _pickableTarget = pickableObject;
                     }
