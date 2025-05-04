@@ -1,7 +1,6 @@
 using Input;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
 public class PlayerDrone : MonoBehaviour
@@ -116,8 +115,7 @@ public class PlayerDrone : MonoBehaviour
        if(battery < 50f && BatteryHUD[2].gameObject.activeSelf){BatteryHUD[2].gameObject.SetActive(false);}
        if(battery < 25f && BatteryHUD[1].gameObject.activeSelf){BatteryHUD[1].gameObject.SetActive(false);}
        if(battery <= 0f && BatteryHUD[0].gameObject.activeSelf){BatteryHUD[1].gameObject.SetActive(false);}
-       
-        Debug.Log(battery);
+      
 
 
        
