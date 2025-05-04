@@ -54,6 +54,10 @@ public class PlayerDrone : MonoBehaviour
     private Vector3 rollVec, pitchVec, yawVec;
     private float forceX, forceY, forceZ;
 
+    [SerializeField] Vector3 basePosition;
+
+    [SerializeField] float rangeLimit;
+ 
    
 
     
@@ -126,7 +130,7 @@ public class PlayerDrone : MonoBehaviour
 
 
     void Update()
-    { 
+    {
         scrapHolding = UpgradeManager.Instance.dataHolder.inventory.Get(ItemTypes.Scrap);
         
        if(droneAxis.x != 0 || droneAxis.y != 0 || droneThrottle.x != 0 || droneAxis.y != 0){battery -= Time.deltaTime*2;}
@@ -149,6 +153,8 @@ public class PlayerDrone : MonoBehaviour
     {
        DronePitchRoll(pitch,roll);
        DroneEngineYaw(idleThrust,throttle,yaw);
+       DroneFlightAssist(pitch,roll,flightAssist,pitchDeadZone,rollDeadZone);
+       CalculateDistance();
     }
     else
     {
@@ -159,7 +165,7 @@ public class PlayerDrone : MonoBehaviour
 
       
        
-       DroneFlightAssist(pitch,roll,flightAssist,pitchDeadZone,rollDeadZone);
+    
 
 
 
@@ -260,6 +266,21 @@ public class PlayerDrone : MonoBehaviour
     }
 
 
+    private void CalculateDistance()
+    {
+        
+        var distance = new Vector3(transform.position.x,0,transform.position.z) - basePosition;
+        
+        pitchDeadZone = 0.1f + 90/(1+Mathf.Exp(rangeLimit-distance.magnitude));
+
+        rollDeadZone = 0.1f + 90/(1+Mathf.Exp(rangeLimit-distance.magnitude));
+
+        Debug.Log(distance.magnitude);
+
+
+
+
+    }
 
     ///
     ///UPGRADE METHODLAR
@@ -271,7 +292,7 @@ public class PlayerDrone : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Ground"))
         {
-            SceneManager.LoadScene(0);
+            GameManager.EndLevel();
         }
     }
 

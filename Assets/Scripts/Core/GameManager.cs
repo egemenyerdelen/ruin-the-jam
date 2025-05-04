@@ -59,7 +59,12 @@ namespace Core
 
         public static void EndLevel()
         {
-            PauseGame();
+            //PauseGame();
+            #if UNITY_EDITOR
+        //Stop playing the scene
+        UnityEditor.EditorApplication.isPlaying = false;
+    #endif
+            Application.Quit();
             
             
             // Will add upgrade menu and open it in here

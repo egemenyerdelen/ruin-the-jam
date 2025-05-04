@@ -612,13 +612,15 @@ MonoBehaviour:
   rollRate: 0.2
   pitchRate: 0.15
   yawRate: 0.5
-  flightAssist: 0.2
+  flightAssist: 1
   rollDeadZone: 0.5
   pitchDeadZone: 0.5
   rollLimit: 0
   pitchLimit: 0
   dragCoefficient: 1
   limitCoefficient: 0
+  basePosition: {x: -18, y: 3, z: 0}
+  rangeLimit: 100
 --- !u!114 &7716437154257579174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -930,6 +932,22 @@ PrefabInstance:
     - target: {fileID: 4000012611177122, guid: f5344c194bab9264c93ba5f2f38dab9e, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65000011997126844, guid: f5344c194bab9264c93ba5f2f38dab9e, type: 3}
+      propertyPath: m_Size.z
+      value: 1.8957887
+      objectReference: {fileID: 0}
+    - target: {fileID: 65000011997126844, guid: f5344c194bab9264c93ba5f2f38dab9e, type: 3}
+      propertyPath: m_Center.x
+      value: -0.25399998
+      objectReference: {fileID: 0}
+    - target: {fileID: 65000011997126844, guid: f5344c194bab9264c93ba5f2f38dab9e, type: 3}
+      propertyPath: m_Center.y
+      value: 0.18000036
+      objectReference: {fileID: 0}
+    - target: {fileID: 65000011997126844, guid: f5344c194bab9264c93ba5f2f38dab9e, type: 3}
+      propertyPath: m_Center.z
+      value: 0.21210562
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
