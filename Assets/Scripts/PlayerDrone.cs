@@ -296,6 +296,8 @@ public class PlayerDrone : MonoBehaviour
         totalScrapT.text = "Total Scrap: " + totalScrap;
 
         carriedScrapT.text = "Scrap Carried: " + scrapHolding;
+
+        Debug.Log(totalScrap);
         
     }
 
