@@ -20,7 +20,7 @@ namespace Player
 
         private void Update()
         {
-            if (!canInteract) return;
+            if (!canInteract) {return;}
             
             DetectInteraction();
 
@@ -31,6 +31,11 @@ namespace Player
                 
                 _highlightableTarget?.DisableOutline();
                 _highlightableTarget = null;
+            }
+            if (InputManager.InputSystem.Drone.Interact.IsPressed())
+            {
+                _interactableTarget?.Interact();
+                _pickableTarget?.PickUp();
             }
         }
         

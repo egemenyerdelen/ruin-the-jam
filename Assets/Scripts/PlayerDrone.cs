@@ -50,7 +50,8 @@ public class PlayerDrone : MonoBehaviour
     
     void Start()
     {
-        CreateInputSystem();
+        inputActions = InputManager.InputSystem;
+       
         rb = GetComponent<Rigidbody>();
         battery = batteryCap;
     }
@@ -58,30 +59,65 @@ public class PlayerDrone : MonoBehaviour
     void OnEnable()
     {
         
+       
     }
 
     void OnDisable()
     {
+        
+        DisableInputSystem();
+        
+    }
+    
+    //INPUT SYSTEM
+    public void EnableInputSystem()
+    {
+        inputActions.Drone.Enable();
+        inputActions.Drone.Flight.performed += FlightPhys;
+        inputActions.Drone.Flight.canceled += ctx => droneAxis = Vector3.zero;
+
+        inputActions.Drone.Thrust.performed += Thrust;
+        inputActions.Drone.Thrust.canceled += ctx => droneThrottle = Vector2.zero;
+    }
+
+    public void DisableInputSystem()
+    {
+        inputActions.Drone.Disable();
         inputActions.Drone.Flight.performed -= FlightPhys;
         inputActions.Drone.Flight.canceled -= ctx => droneAxis = Vector3.zero;
 
         inputActions.Drone.Thrust.performed -= Thrust;
         inputActions.Drone.Thrust.canceled -= ctx => droneThrottle = Vector2.zero;
-        
     }
+    
+
+    void FlightPhys(InputAction.CallbackContext context)
+    {
+        droneAxis = context.ReadValue<Vector3>();
+
+    }
+
+    void Thrust(InputAction.CallbackContext context)
+    {
+        droneThrottle = context.ReadValue<Vector2>();
+
+    }
+
+    /// 
+    
 
 
     void Update()
     {
        
-       battery -= Time.deltaTime;
+       if(droneAxis.x != 0 || droneAxis.y != 0 || droneThrottle.x != 0 || droneAxis.y != 0){battery -= Time.deltaTime*2;}
 
        if(battery < 75f && BatteryHUD[3].gameObject.activeSelf){BatteryHUD[3].gameObject.SetActive(false);}
        if(battery < 50f && BatteryHUD[2].gameObject.activeSelf){BatteryHUD[2].gameObject.SetActive(false);}
        if(battery < 25f && BatteryHUD[1].gameObject.activeSelf){BatteryHUD[1].gameObject.SetActive(false);}
        if(battery <= 0f && BatteryHUD[0].gameObject.activeSelf){BatteryHUD[1].gameObject.SetActive(false);}
        
-
+        Debug.Log(battery);
 
 
        
@@ -227,35 +263,5 @@ public class PlayerDrone : MonoBehaviour
 
     
 
-    void CreateInputSystem()
-    {
-        inputActions = InputManager.InputSystem;
-        
-        // inputActions.Drone.Enable();
-
-        inputActions.Drone.Flight.performed += FlightPhys;
-        inputActions.Drone.Flight.canceled += ctx => droneAxis = Vector3.zero;
-
-        inputActions.Drone.Thrust.performed += Thrust;
-        inputActions.Drone.Thrust.canceled += ctx => droneThrottle = Vector2.zero;
-        
-
-
-        
-
-
-    }
-
-    void FlightPhys(InputAction.CallbackContext context)
-    {
-        droneAxis = context.ReadValue<Vector3>();
-
-    }
-
-    void Thrust(InputAction.CallbackContext context)
-    {
-        droneThrottle = context.ReadValue<Vector2>();
-
-    }
 }
  

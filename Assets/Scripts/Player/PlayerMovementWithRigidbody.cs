@@ -14,26 +14,39 @@ namespace Player
         private InputSystem_Actions _inputSystem;
         private Vector2 _moveDirection;
 
-        private void Start()
-        {
-            CreateAndPrepareInputSystem();
-        }
 
-        private void OnDisable()
-        {
-            if (_inputSystem == null) return;
-            
-            _inputSystem.Player.Move.performed -= UpdateMoveDirection;
-        }
         
-        private void CreateAndPrepareInputSystem()
+        private void Start()
         {
             _inputSystem = InputManager.InputSystem;
             _inputSystem.Player.Enable();
+            EnableInputSystem();
+        }
+
+        private void OnEnable()
+        {
             
+                     
+        }
+        private void OnDisable()
+        {
+            if (_inputSystem == null) return;
+            _inputSystem.Player.Disable();
+            DisableInputSystem();
+        }
+
+        public void EnableInputSystem()
+        {
             _inputSystem.Player.Move.performed += UpdateMoveDirection;
             _inputSystem.Player.Move.canceled += ctx => _moveDirection = Vector2.zero;
         }
+        public void DisableInputSystem()
+        {
+            _inputSystem.Player.Move.performed -= UpdateMoveDirection;
+            _inputSystem.Player.Move.canceled -= ctx => _moveDirection = Vector2.zero;
+        }
+        
+      
 
         private void UpdateMoveDirection(InputAction.CallbackContext context)
         {
