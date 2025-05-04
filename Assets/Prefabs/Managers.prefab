@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 6299407186642895611}
   - component: {fileID: 4525606742669852415}
   m_Layer: 0
-  m_Name: Ugrade Manager
+  m_Name: Upgrade Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -244,9 +244,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92e6c296cf5340a479d1df1a325e2280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dataHolder: {fileID: 4525606742669852415}
   drone: {fileID: 0}
   player: {fileID: 0}
-  dataHolder: {fileID: 4525606742669852415}
+  carryUpgradeCost: 0
+  batteryUpgradeCost: 0
+  distanceUpgradeCost: 0
+  engineUpgradeCost: 0
 --- !u!114 &4525606742669852415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,6 +312,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92e6c296cf5340a479d1df1a325e2280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dataHolder: {fileID: 0}
   drone: {fileID: 0}
   player: {fileID: 0}
-  dataHolder: {fileID: 0}
+  carryUpgradeCost: 0
+  batteryUpgradeCost: 0
+  distanceUpgradeCost: 0
+  engineUpgradeCost: 0

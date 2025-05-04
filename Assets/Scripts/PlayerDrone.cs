@@ -3,11 +3,13 @@ using InventorySystem;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using Upgrade;
 
 public class PlayerDrone : MonoBehaviour
 {
     public int scrapCapacity;
     public int scrapHolding;
+    public int distanceLimit;
     
     private Rigidbody rb;
     private InputSystem_Actions inputActions;
