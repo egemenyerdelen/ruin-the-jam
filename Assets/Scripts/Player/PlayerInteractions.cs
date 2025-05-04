@@ -24,10 +24,13 @@ namespace Player
             
             DetectInteraction();
 
-            if (InputManager.InputSystem.Player.Interact.IsPressed())
+            if (InputManager.InputSystem.Player.Interact.IsPressed() || InputManager.InputSystem.Drone.Interact.IsPressed())
             {
                 _interactableTarget?.Interact();
                 _pickableTarget?.PickUp();
+                
+                _highlightableTarget?.DisableOutline();
+                _highlightableTarget = null;
             }
         }
         

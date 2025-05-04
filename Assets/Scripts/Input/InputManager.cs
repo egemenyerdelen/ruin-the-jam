@@ -16,7 +16,7 @@ namespace Input
 
         private void OnEnable()
         {
-            InputSystem.Enable();
+            // InputSystem.Enable();
         }
 
         private void OnDisable()

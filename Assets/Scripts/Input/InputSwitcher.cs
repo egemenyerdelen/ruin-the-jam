@@ -1,6 +1,7 @@
 using System;
 using CameraSystem;
 using Helpers;
+using UnityEngine;
 
 namespace Input
 {
@@ -11,18 +12,17 @@ namespace Input
         public void SwitchController(ControllerType controllerType)
         {
             activeController = controllerType;
+            InputManager.DisableInputSystem();
             
             switch (controllerType)
             {
                 case ControllerType.Player:
-                    InputManager.InputSystem.Drone.Disable();
                     
                     InputManager.InputSystem.Player.Enable();
                     CameraManager.Instance.SwitchPlayerCamera();
 
                     break;
                 case ControllerType.Drone:
-                    InputManager.InputSystem.Player.Disable();
                     
                     InputManager.InputSystem.Drone.Enable();
                     CameraManager.Instance.SwitchDroneCamera();
