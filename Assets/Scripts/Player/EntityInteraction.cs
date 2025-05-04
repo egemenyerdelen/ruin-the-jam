@@ -1,3 +1,4 @@
+using Audio;
 using Input;
 using InventorySystem;
 using UnityEngine;
@@ -37,8 +38,11 @@ namespace Player
                 
                 var typeCountMatch = _pickableTarget.GetItemDataMatch();
                 if (droneScript.scrapHolding >= droneScript.scrapCapacity) return;
-                
+
+                AudioManager.Instance.PlaySoundFX("Scrap", 2);
                 UpgradeManager.Instance.dataHolder.inventory.Add(typeCountMatch.ItemType, typeCountMatch.Count);
+
+
                 _pickableTarget.PickUp();
             }
         }

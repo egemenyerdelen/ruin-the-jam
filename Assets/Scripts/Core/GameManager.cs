@@ -61,6 +61,7 @@ namespace Core
         {
             PauseGame();
             
+            
             // Will add upgrade menu and open it in here
         }
         

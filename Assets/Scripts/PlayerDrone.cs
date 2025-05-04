@@ -1,6 +1,6 @@
+using Audio;
 using Input;
 using InventorySystem;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -89,6 +89,7 @@ public class PlayerDrone : MonoBehaviour
 
         inputActions.Drone.Thrust.performed += Thrust;
         inputActions.Drone.Thrust.canceled += ctx => droneThrottle = Vector2.zero;
+        inputActions.Drone.Thrust.canceled += ThrustCanceled;
     }
 
     public void DisableInputSystem()
@@ -99,6 +100,7 @@ public class PlayerDrone : MonoBehaviour
 
         inputActions.Drone.Thrust.performed -= Thrust;
         inputActions.Drone.Thrust.canceled -= ctx => droneThrottle = Vector2.zero;
+        inputActions.Drone.Thrust.canceled -= ThrustCanceled;
     }
     
 
@@ -111,7 +113,12 @@ public class PlayerDrone : MonoBehaviour
     void Thrust(InputAction.CallbackContext context)
     {
         droneThrottle = context.ReadValue<Vector2>();
+        AudioManager.Instance.audioSources[0].volume = .8f;
+    }
 
+    private void ThrustCanceled(InputAction.CallbackContext context)
+    {
+        AudioManager.Instance.audioSources[0].volume = .25f;
     }
 
     /// 

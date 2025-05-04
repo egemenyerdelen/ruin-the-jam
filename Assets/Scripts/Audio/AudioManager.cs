@@ -6,7 +6,7 @@ namespace Audio
 {
     public class AudioManager : Singleton<AudioManager>
     {
-        [SerializeField] private AudioSource[] audioSources;
+        public AudioSource[] audioSources;
         [SerializeField] private Sound[] musics;
         [SerializeField] private Sound[] soundEffects;
 
@@ -15,7 +15,9 @@ namespace Audio
         protected override void Awake()
         {
             base.Awake();
-            audioSources = GetComponents<AudioSource>();
+            // audioSources = GetComponents<AudioSource>();
+            
+            PlayMusic("Drone", 0);
         }
 
         public void PlayMusic(string musicName, int audioSourceIndex = 0)
