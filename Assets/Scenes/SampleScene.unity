@@ -224,6 +224,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 792815257}
     - target: {fileID: 9169103961518822652, guid: 27f3325813c95e94298843e06aee2460, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9169103961518822652, guid: 27f3325813c95e94298843e06aee2460, type: 3}
       propertyPath: 'BatteryHUD.Array.data[0]'
       value: 
       objectReference: {fileID: 1089605934}
@@ -434,7 +438,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 796532931}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8d00253a129ad2459960ec053a7fc32, type: 3}
   m_Name: 
