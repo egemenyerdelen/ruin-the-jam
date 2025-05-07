@@ -282,7 +282,9 @@ public class PlayerDrone : MonoBehaviour
         pitchDeadZone = 0.1f + 90/(1+0.5f*Mathf.Exp(rangeLimit-distance.magnitude));
 
         rollDeadZone = 0.1f + 90/(1+0.5f*Mathf.Exp(rangeLimit-distance.magnitude));
-
+        
+        
+        carriedScrapT.text = "RADIATION: " + pitchDeadZone;
       
 
 
@@ -295,7 +297,7 @@ public class PlayerDrone : MonoBehaviour
 
         totalScrapT.text = "Total Scrap: " + totalScrap;
 
-        carriedScrapT.text = "Scrap Carried: " + scrapHolding;
+        
 
         Debug.Log(totalScrap);
         
