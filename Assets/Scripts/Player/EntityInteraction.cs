@@ -1,6 +1,7 @@
 using Audio;
-using Input;
+using Drone;
 using InventorySystem;
+using Systems.Input;
 using UnityEngine;
 using Upgrade;
 
@@ -29,6 +30,7 @@ namespace Player
             if (InputManager.InputSystem.Player.Interact.IsPressed() && InputSwitcher.Instance.activeController == ControllerType.Player)
             {
                 _interactableTarget?.Interact();
+                Debug.Log("Interacted");
                 // _pickableTarget?.PickUp();
             }
             if (InputManager.InputSystem.Drone.Interact.IsPressed() && InputSwitcher.Instance.activeController == ControllerType.Drone)
@@ -38,7 +40,7 @@ namespace Player
                 if (_pickableTarget == null) return;
                 
                 // var typeCountMatch = _pickableTarget.GetItemDataMatch();
-                if (_scrapHolding >= droneScript.scrapCapacity) return;
+                // if (_scrapHolding >= droneScript.scrapCapacity) return;
 
                 AudioManager.Instance.PlaySoundFX("Scrap", 2);
                 UpgradeManager.Instance.dataHolder.inventory.Add(ItemTypes.Scrap, 1);

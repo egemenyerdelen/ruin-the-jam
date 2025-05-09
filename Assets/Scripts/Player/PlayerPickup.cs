@@ -1,5 +1,5 @@
-using Input;
 using InventorySystem;
+using Systems.Input;
 using UnityEngine;
 
 namespace Player

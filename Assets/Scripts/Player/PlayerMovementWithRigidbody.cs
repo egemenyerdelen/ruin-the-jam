@@ -1,4 +1,4 @@
-using Input;
+using Systems.Input;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -19,7 +19,7 @@ namespace Player
         private void Start()
         {
             _inputSystem = InputManager.InputSystem;
-            _inputSystem.Player.Enable();
+           // _inputSystem.Drone.Enable();
             EnableInputSystem();
         }
 

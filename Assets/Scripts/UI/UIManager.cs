@@ -1,8 +1,8 @@
 using System;
 using CameraSystem;
-using Core;
+using GameManagement;
 using Helpers;
-using Input;
+using Systems.Input;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -98,7 +98,7 @@ namespace UI
 
             if (upgradeMenu.activeSelf)
             {
-                CameraManager.Instance.SwitchPlayerCamera();
+                CameraSwitcher.Instance.ActivatePlayerCam();
                 CloseUpgradeMenu();
                 return;
             }

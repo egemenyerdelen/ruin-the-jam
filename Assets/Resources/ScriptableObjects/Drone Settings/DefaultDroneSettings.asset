@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e65576d9e8ac4047ac565baf7fde42f4, type: 3}
+  m_Name: DefaultDroneSettings
+  m_EditorClassIdentifier: 
+  batteryCap: 100
+  idleThrust: 10
+  maxThrust: 100
+  rollRate: 50
+  pitchRate: 50
+  yawRate: 50
+  flightAssist: 2
+  rollDeadZone: 2
+  pitchDeadZone: 2
+  dragCoefficient: 0.2
+  limitCoefficient: 1
+  rangeLimit: 30
