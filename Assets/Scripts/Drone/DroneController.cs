@@ -1,3 +1,5 @@
+using System;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Drone
@@ -5,63 +7,85 @@ namespace Drone
     [RequireComponent(typeof(Rigidbody))]
     public class DroneController : MonoBehaviour
     {
-        [SerializeField] private DroneSettings settings;
-        private Rigidbody rb;
-        private Vector3 inputAxis;
-        private Vector2 inputThrottle;
-        private float battery;
+        [Header("References")]
+        [Required, SerializeField] private PlayerDroneInputHandler inputProvider;
+        [Required, SerializeField] private DroneSettings droneSettings;
+        [Required, SerializeField] private Rigidbody droneRigidbody;
+        
+        private Vector3 _force;
+        private Vector3 _torque;
 
-        void Awake()
+        private Vector3 _flightInput;
+        private Vector2 _thrustInput;
+        private float _roll, _pitch, _yaw, _throttle;
+
+        private void Update()
         {
-            rb = GetComponent<Rigidbody>();
-            battery = settings.batteryCap;
+            _flightInput = inputProvider.FlightInput;
+            _thrustInput = inputProvider.ThrustInput;
+
+            _roll = _flightInput.x;
+            _pitch = _flightInput.y;
+            _yaw = _thrustInput.x;
+            _throttle = _thrustInput.y;
         }
 
-        void Update()
+        private void FixedUpdate()
         {
-            if (battery <= 0) return;
-
-            HandleInputs();
+            ApplyDronePhysics();
         }
 
-        void FixedUpdate()
+        private void ApplyDronePhysics()
         {
-            ApplyPhysics();
-        }
+            _force = transform.up * (droneSettings.idleThrust + droneSettings.thrustPower * _throttle * Time.deltaTime);
+            _force -= droneRigidbody.linearVelocity * droneSettings.dragCoefficient;
 
-        public void SetInputs(Vector3 axis, Vector2 throttle)
-        {
-            inputAxis = axis;
-            inputThrottle = throttle;
-        }
+            var rollVec = transform.forward * (-_roll * droneSettings.rollRate * Time.deltaTime);
+            var pitchVec = transform.right * (_pitch * droneSettings.pitchRate * Time.deltaTime);
+            var yawVec = transform.up * (_yaw * droneSettings.yawRate * Time.deltaTime);
 
-        private void HandleInputs()
-        {
-            if (inputAxis != Vector3.zero || inputThrottle != Vector2.zero)
-            {
-                battery -= Time.deltaTime * 2f;
-            }
-        }
+            _torque = rollVec + pitchVec + yawVec;
 
-        private void ApplyPhysics()
-        {
-            rb.AddForce(transform.up * (settings.idleThrust + inputThrottle.y * settings.maxThrust));
-            rb.AddTorque(CalculateTorque());
-            ApplyDrag();
+            ApplyMotionSmoothing();
+            ApplyFlightAssist();
+
+            droneRigidbody.AddForce(_force);
+            droneRigidbody.AddTorque(_torque);
         }
         
-        private Vector3 CalculateTorque()
+        private void ApplyMotionSmoothing()
         {
-            Vector3 torque = Vector3.zero;
-            torque += -inputAxis.x * settings.rollRate * transform.forward;
-            torque += inputAxis.y * settings.pitchRate * transform.right;
-            torque += inputThrottle.x * settings.yawRate * transform.up;
-            return torque;
+            var assistTorque = Vector3.zero;
+            
+            assistTorque.x = -droneRigidbody.angularVelocity.x * droneSettings.motionSmoothness * Time.deltaTime;
+            
+            assistTorque.z = -droneRigidbody.angularVelocity.z * droneSettings.motionSmoothness * Time.deltaTime;
+
+            assistTorque.y = -droneRigidbody.angularVelocity.y * droneSettings.motionSmoothness * Time.deltaTime;
+
+            _torque += assistTorque;
         }
 
-        private void ApplyDrag()
+        private void ApplyFlightAssist()
         {
-            rb.linearVelocity *= (1f - settings.dragCoefficient * Time.fixedDeltaTime);
+            // Skip assist if the player is actively controlling pitch or roll
+            var isInputControlling = 
+                Mathf.Abs(_roll) > droneSettings.rollDeadZone || Mathf.Abs(_pitch) > droneSettings.pitchDeadZone;
+
+            if (isInputControlling) return;
+
+            // Align drone's up direction with world up (Vector3.up)
+            var currentUp = transform.up;
+            var targetUp = Vector3.up;
+
+            // Calculate the torque needed to align up vectors using cross product
+            var stabilizationTorque = Vector3.Cross(currentUp, targetUp) * droneSettings.flightAssist;
+
+            // Apply torque smoothing
+            // Sorry for magic numbers but its neccessary
+            stabilizationTorque -= droneRigidbody.angularVelocity * (droneSettings.flightAssist * 0.01f);
+
+            _torque += stabilizationTorque * .05f;
         }
     }
 }

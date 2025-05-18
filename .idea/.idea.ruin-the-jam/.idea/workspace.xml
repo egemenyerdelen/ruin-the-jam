@@ -6,390 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="5804334a-21f4-49c2-8d6a-41d95185380c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ruin-the-jam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ruin-the-jam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/Docs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/Docs/Dark Wave Paint - DWP_Table_01 Documentation.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/Docs/Dark Wave Paint - DWP_Table_01 Documentation.pdf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/Mesh FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/Mesh FBX/DWP_Table_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/Mesh FBX/DWP_Table_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/Prefabs/DWP_Table_01_URP_Metallic.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/Prefabs/DWP_Table_01_URP_Metallic.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/Prefabs/DWP_Table_01_URP_Specular.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/Prefabs/DWP_Table_01_URP_Specular.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/URP_Metallic.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/URP_Metallic/DWP_Table_01_AlbedoTransparency_URP_METALLIC.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/URP_Metallic/DWP_Table_01_AlbedoTransparency_URP_METALLIC.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/URP_Metallic/DWP_Table_01_Height_URP_Metallic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/URP_Metallic/DWP_Table_01_Height_URP_Metallic.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/URP_Metallic/DWP_Table_01_MetallicSmoothness_URP_METALLIC.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/URP_Metallic/DWP_Table_01_MetallicSmoothness_URP_METALLIC.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/URP_Metallic/DWP_Table_01_Normal_URP_METALLIC.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/URP_Metallic/DWP_Table_01_Normal_URP_METALLIC.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/URP_Metallic/DWP_Table_01_Occlusion_URP_Metallic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/URP_Metallic/DWP_Table_01_Occlusion_URP_Metallic.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/URP_Metallic/DWP_Table_01_URP_Metallic.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/URP_Metallic/DWP_Table_01_URP_Metallic.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/URP_Specular.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/URP_Specular/DWP_Table_01_AlbedoTransparency_URP_SPECULAR.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/URP_Specular/DWP_Table_01_AlbedoTransparency_URP_SPECULAR.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/URP_Specular/DWP_Table_01_Height_URP_Specular.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/URP_Specular/DWP_Table_01_Height_URP_Specular.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/URP_Specular/DWP_Table_01_Normal_URP_SPECULAR.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/URP_Specular/DWP_Table_01_Normal_URP_SPECULAR.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/URP_Specular/DWP_Table_01_Occlusion_URP_Specular.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/URP_Specular/DWP_Table_01_Occlusion_URP_Specular.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/URP_Specular/DWP_Table_01_SpecularSmoothness_URP_SPECULAR.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/URP_Specular/DWP_Table_01_SpecularSmoothness_URP_SPECULAR.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/URP_Specular/DWP_Table_01_URP_Specular.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Wave Paint/DWP_Table_01/URP_Specular/DWP_Table_01_URP_Specular.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Example Scenes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Example Scenes/Script.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Example Scenes/sky-1.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Example Scenes/sky-1.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Example Scenes/sky-2.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Example Scenes/sky-2.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Example Scenes/sky-3.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Example Scenes/sky-3.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Example Scenes/sky-4.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Example Scenes/sky-4.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Example Scenes/sky-5.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Example Scenes/sky-5.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Material.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Material/sky-1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Material/sky-1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Material/sky-2.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Material/sky-2.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Material/sky-3.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Material/sky-3.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Material/sky-4.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Material/sky-4.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Material/sky-5.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Material/sky-5.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/ReadMe.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/ReadMe.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Texture.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Texture/Sky-1.hdr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Texture/Sky-1.hdr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Texture/Sky-2.hdr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Texture/Sky-2.hdr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Texture/Sky-3.hdr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Texture/Sky-3.hdr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Texture/Sky-4.hdr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Texture/Sky-4.hdr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Texture/Sky-5.hdr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free HDR Skyboxes Pack/Texture/Sky-5.hdr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Lens Flare (Unity Standard).meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Lens Flare (Unity Standard)/Laser.flare" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Lens Flare (Unity Standard)/Laser.flare.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Lens Flare (Unity Standard)/laser.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Lens Flare (Unity Standard)/laser.psd.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Materials/Drone Battery.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Materials/Drone Battery.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Materials/Drone Cam.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Materials/Drone Cam.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Materials/Drone Chassis.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Materials/Drone Chassis.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Materials/Drone Motor.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Materials/Drone Motor.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Materials/Wing Parts.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Materials/Wing Parts.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Models.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Models/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Models/Materials/Drone Battery.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Models/Materials/Drone Battery.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Models/Materials/Drone Cam.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Models/Materials/Drone Cam.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Models/Materials/Drone Chassis.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Models/Materials/Drone Chassis.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Models/Materials/Drone Motor.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Models/Materials/Drone Motor.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Models/Materials/Wing Parts.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Models/Materials/Wing Parts.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Models/Racing Drone v2.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Models/Racing Drone v2.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Models/Racing Drone v2.fbm.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Models/Racing Drone v2.fbm/Drone Battery.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Models/Racing Drone v2.fbm/Drone Battery.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Models/Racing Drone v2.fbm/Drone Cam.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Models/Racing Drone v2.fbm/Drone Cam.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Models/Racing Drone v2.fbm/Drone Chassis.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Models/Racing Drone v2.fbm/Drone Chassis.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Models/Racing Drone v2.fbm/Drone Motor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Models/Racing Drone v2.fbm/Drone Motor.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Models/Racing Drone v2.fbm/Wing Parts.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Models/Racing Drone v2.fbm/Wing Parts.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated).meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Materials/Drone Battery.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Materials/Drone Battery.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Materials/Drone Cam.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Materials/Drone Cam.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Materials/Drone Chassis.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Materials/Drone Chassis.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Materials/Drone Motor.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Materials/Drone Motor.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Materials/Wing Parts.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Materials/Wing Parts.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Models.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Models/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Models/Materials/Drone Battery.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Models/Materials/Drone Battery.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Models/Materials/Drone Cam.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Models/Materials/Drone Cam.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Models/Materials/Drone Chassis.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Models/Materials/Drone Chassis.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Models/Materials/Drone Motor.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Models/Materials/Drone Motor.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Models/Materials/Wing Parts.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Models/Materials/Wing Parts.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Models/Racing Drone Merged.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Models/Racing Drone Merged.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Prefabs/Drone_Parent.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Prefabs/Drone_Parent.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Diffuse.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Diffuse/Drone Battery_Diffuse.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Diffuse/Drone Battery_Diffuse.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Diffuse/Drone Cam_Diffuse.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Diffuse/Drone Cam_Diffuse.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Diffuse/Drone Chassis_Diffuse.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Diffuse/Drone Chassis_Diffuse.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Diffuse/Drone Parts_Diffuse.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Diffuse/Drone Parts_Diffuse.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Diffuse/Drone Prop_Diffuse.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Diffuse/Drone Prop_Diffuse.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Emission.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Emission/Drone Parts_Emission.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Emission/Drone Parts_Emission.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Metal.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Metal/Drone Battery_Metallic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Metal/Drone Battery_Metallic.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Metal/Drone Cam_Metallic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Metal/Drone Cam_Metallic.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Metal/Drone Chassis_Metallic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Metal/Drone Chassis_Metallic.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Metal/Drone Parts_Metallic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Metal/Drone Parts_Metallic.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Metal/Drone Prop_Metallic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Metal/Drone Prop_Metallic.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Normal.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Normal/Chassis Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Normal/Chassis Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Normal/Drone Battery Normals.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Normal/Drone Battery Normals.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Normal/Drone Cam Normals.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Normal/Drone Cam Normals.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Normal/Drone Prop_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Normal/Drone Prop_Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Normal/Wing Parts Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Textures/Normal/Wing Parts Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Prefabs/Drone_Parent.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Prefabs/Drone_Parent.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Scripts/DroneAnimator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Scripts/DroneAnimator.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Diffuse.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Diffuse/Racing Drone v2_02 - Default_AlbedoTransparency.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Diffuse/Racing Drone v2_02 - Default_AlbedoTransparency.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Diffuse/Racing Drone v2_03 - Default_AlbedoTransparency.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Diffuse/Racing Drone v2_03 - Default_AlbedoTransparency.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Diffuse/Racing Drone v2_07 - Default_AlbedoTransparency.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Diffuse/Racing Drone v2_07 - Default_AlbedoTransparency.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Diffuse/Racing Drone v2_08 - Default_AlbedoTransparency.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Diffuse/Racing Drone v2_08 - Default_AlbedoTransparency.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Diffuse/Racing Drone v2_09 - Default_AlbedoTransparency.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Diffuse/Racing Drone v2_09 - Default_AlbedoTransparency.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Emmision.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Emmision/Racing Drone v2_03 - Default_Emission.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Emmision/Racing Drone v2_03 - Default_Emission.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Emmision/Racing Drone v2_08 - Default_Emission.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Emmision/Racing Drone v2_08 - Default_Emission.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Metal.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Metal/Racing Drone v2_02 - Default_MetallicSmoothness.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Metal/Racing Drone v2_02 - Default_MetallicSmoothness.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Metal/Racing Drone v2_03 - Default_MetallicSmoothness.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Metal/Racing Drone v2_03 - Default_MetallicSmoothness.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Metal/Racing Drone v2_07 - Default_MetallicSmoothness.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Metal/Racing Drone v2_07 - Default_MetallicSmoothness.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Metal/Racing Drone v2_08 - Default_MetallicSmoothness.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Metal/Racing Drone v2_08 - Default_MetallicSmoothness.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Metal/Racing Drone v2_09 - Default_MetallicSmoothness.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Metal/Racing Drone v2_09 - Default_MetallicSmoothness.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Normal.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Normal/Racing Drone v2_02 - Default_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Normal/Racing Drone v2_02 - Default_Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Normal/Racing Drone v2_03 - Default_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Normal/Racing Drone v2_03 - Default_Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Normal/Racing Drone v2_07 - Default_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Normal/Racing Drone v2_07 - Default_Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Normal/Racing Drone v2_08 - Default_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Normal/Racing Drone v2_08 - Default_Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Normal/Racing Drone v2_09 - Default_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Racing Drone/Textures/Normal/Racing Drone v2_09 - Default_Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Drone.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Drone.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Environment.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Environment.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/HUD.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/HUD.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/New Material.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/New Material.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/Scrap.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/Scrap.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player Base.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player Base.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TERAS.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TERAS.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TempAudioObject.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TempAudioObject.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QuickOutline.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QuickOutline/Readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QuickOutline/Readme.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QuickOutline/Resources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QuickOutline/Resources/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QuickOutline/Resources/Materials/OutlineFill.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QuickOutline/Resources/Materials/OutlineFill.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QuickOutline/Resources/Materials/OutlineMask.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QuickOutline/Resources/Materials/OutlineMask.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QuickOutline/Resources/Shaders.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QuickOutline/Resources/Shaders/OutlineFill.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QuickOutline/Resources/Shaders/OutlineFill.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QuickOutline/Resources/Shaders/OutlineMask.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QuickOutline/Resources/Shaders/OutlineMask.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QuickOutline/Samples.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QuickOutline/Samples/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QuickOutline/Samples/Materials/Plane.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QuickOutline/Samples/Materials/Plane.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QuickOutline/Samples/Scenes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QuickOutline/Samples/Scenes/QuickOutline.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QuickOutline/Samples/Scenes/QuickOutline.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QuickOutline/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QuickOutline/Scripts/Outline.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QuickOutline/Scripts/Outline.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/External Assets/PBR Racing Drone/Materials/Drone Cam.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/External Assets/PBR Racing Drone/Materials/Drone Cam.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/External Assets/PBR Racing Drone/Materials/Wing Parts.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/External Assets/PBR Racing Drone/Materials/Wing Parts.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/External Assets/PBR Racing Drone/Prefabs/Drone_Parent.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/External Assets/PBR Racing Drone/Prefabs/Drone_Parent.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Drone/Drone.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Drone/Drone.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Drone Settings/DefaultDroneSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Drone Settings/DefaultDroneSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraSystem/CameraManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraSystem/CameraSwitcher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraSystem/CameraManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraSystem/CameraSwitcher.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Helpers/TextBreatheEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Helpers/TextBreatheEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input/InputManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input/InputManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input/InputSwitcher.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input/InputSwitcher.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input/InputSystem_Actions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input/InputSystem_Actions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input/InputSystem_Actions.inputactions" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input/InputSystem_Actions.inputactions.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/Item.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/Item.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/Items/TakeOffField.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/Items/TakeOffField.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/New Material 1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/New Material 1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/New Material.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/New Material.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/EntityInteraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/EntityInteraction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerLook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerLook.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovementWithRigidbody.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovementWithRigidbody.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerPickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerPickup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerDrone.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerDrone.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Upgrade.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Upgrade/UpgradeManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Upgrade/UpgradeManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Upgrade/UpgradeTable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Upgrade/UpgradeTable.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/frame.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/frame.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/merkez.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/merkez.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/pil içi 4 parça.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/pil içi 4 parça.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/pil içi tek parça.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/pil içi tek parça.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/pil çerçeve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/pil çerçeve.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/çerçeve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/çerçeve.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Table.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Table/Model.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Table/Model/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Table/Model/Materials/STOL.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Table/Model/Materials/STOL.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Table/Model/Table.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Table/Model/Table.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Table/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Table/Prefabs/Table.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Table/Prefabs/Table.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Table/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Table/Textures/N1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Table/Textures/N1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Table/Textures/T1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Table/Textures/T1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Table/Textures/Temission.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Table/Textures/Temission.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/document.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/document/explenation document.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/document/explenation document.docx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/other.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/other/oceanModelFBX.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/other/oceanModelFBX.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/other/sandMatirial.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/other/sandMatirial.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/piplineAsset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/piplineAsset/New Universal Render Pipeline Asset.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/piplineAsset/New Universal Render Pipeline Asset.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/piplineAsset/New Universal Render Pipeline Asset_Renderer.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/piplineAsset/New Universal Render Pipeline Asset_Renderer.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/prefab/lakePrefab.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/prefab/lakePrefab.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/prefab/oceanPrefab.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/prefab/oceanPrefab.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/sampleScene.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/sampleScene/lakeSampleScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/sampleScene/lakeSampleScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/sampleScene/oceanSampleScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/sampleScene/oceanSampleScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/shaders.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/shaders/lake.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/shaders/lake/foam taxture.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/shaders/lake/foam taxture.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/shaders/lake/lakeMatirial.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/shaders/lake/lakeMatirial.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/shaders/lake/lakeShader.shadergraph" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/shaders/lake/lakeShader.shadergraph.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/shaders/lake/water taxture.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/shaders/lake/water taxture.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/shaders/ocean.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/shaders/ocean/foam taxture.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/shaders/ocean/foam taxture.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/shaders/ocean/seaMatirial.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/shaders/ocean/seaMatirial.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/shaders/ocean/seaShader.shadergraph" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/shaders/ocean/seaShader.shadergraph.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/shaders/ocean/water taxture.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ocean&amp;lakeShaderPack/shaders/ocean/water taxture.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraSystem/CameraSwitcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraSystem/CameraSwitcher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Drone/DroneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Drone/DroneController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Drone/DroneInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Drone/PlayerDroneInputHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Drone/DroneInput.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Drone/DroneInputHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Drone/DroneInputHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Drone/PlayerDroneInputHandler.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Drone/DroneSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Drone/DroneSettings.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -414,10 +43,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6ce09342f8034704bcdf35e10f5a63d82b000/58/885fe4fb/Rigidbody.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CRT-Free/Scripts/CRTDemoBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraSystem/CameraManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerDrone.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Upgrade/UpgradeTable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@16eddacf275e/Runtime/ResourceManager/Util/ComponentSingleton.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@89399b10acbb/Shaders/Lit.shader" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -435,7 +61,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "last-safe-branch",
+    "git-widget-placeholder": "refactor-and-cleanup",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -508,6 +134,7 @@
       <workItem from="1746263560376" duration="14416000" />
       <workItem from="1746283689081" duration="22104000" />
       <workItem from="1746744669060" duration="8487000" />
+      <workItem from="1747574121793" duration="13671000" />
     </task>
     <servers />
   </component>

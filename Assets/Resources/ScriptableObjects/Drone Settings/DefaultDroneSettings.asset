@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: DefaultDroneSettings
   m_EditorClassIdentifier: 
   batteryCap: 100
-  idleThrust: 10
-  maxThrust: 100
-  rollRate: 50
-  pitchRate: 50
-  yawRate: 50
-  flightAssist: 2
-  rollDeadZone: 2
-  pitchDeadZone: 2
+  rangeLimit: 100
+  idleThrust: 9.4
+  maxThrust: 1000
+  rollRate: 10
+  pitchRate: 10
+  yawRate: 15
+  flightAssist: 6
+  motionSmoothness: 5
+  rollDeadZone: 0.8
+  pitchDeadZone: 0.8
   dragCoefficient: 0.2
   limitCoefficient: 1
-  rangeLimit: 30
