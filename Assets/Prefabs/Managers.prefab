@@ -135,10 +135,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a495d2d8b06871e4db88b926cbef9060, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
-  playerCamera: {fileID: 0}
-  droneCamera: {fileID: 0}
-  upgradeTableCamera: {fileID: 0}
+  playerVCam: {fileID: 0}
+  droneVCam: {fileID: 0}
+  droneThirdPerson: {fileID: 0}
 --- !u!1 &2115891219796908163
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e81c1e52b2dd4d958fe441726b41d444, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeController: 0
+  activeController: 1
   Drone: {fileID: 0}
   Player: {fileID: 0}
 --- !u!1 &8204381737790065766

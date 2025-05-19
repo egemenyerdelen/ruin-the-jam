@@ -25,7 +25,7 @@ namespace Systems.Input
                     Player.GetComponent<PlayerMovementWithRigidbody>().EnableInputSystem();
                     Player.GetComponent<EntityInteraction>().canInteract = true;
                     
-                    CameraSwitcher.Instance.ActivatePlayerCam();
+                    // CameraSwitcher.Instance.ActivatePlayerCam();
 
                     Drone.GetComponent<PlayerDrone>().DisableInputSystem();
                     Drone.GetComponent<EntityInteraction>().canInteract = false;
@@ -41,7 +41,7 @@ namespace Systems.Input
                     Drone.GetComponent<PlayerDrone>().BatteryHUD[3].gameObject.SetActive(true);
                     Drone.GetComponent<EntityInteraction>().canInteract = true;
                     
-                    CameraSwitcher.Instance.ActivateDroneCam();
+                    //mCameraSwitcher.Instance.ActivateDroneFirstPersonCam();
 
                     Player.GetComponent<PlayerMovementWithRigidbody>().DisableInputSystem();
                     Player.GetComponent<EntityInteraction>().canInteract = false;

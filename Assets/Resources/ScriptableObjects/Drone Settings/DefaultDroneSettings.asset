@@ -15,7 +15,7 @@ MonoBehaviour:
   batteryCap: 100
   rangeLimit: 100
   idleThrust: 9.4
-  maxThrust: 1000
+  thrustPower: 1000
   rollRate: 10
   pitchRate: 10
   yawRate: 15

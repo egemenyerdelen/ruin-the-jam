@@ -20,7 +20,7 @@ namespace InventorySystem.Items
             //     case ControllerType.Player:
             //         
             //         inputSwitcher.SwitchController(ControllerType.Drone);
-            //         CameraSwitcher.Instance.ActivateDroneCam();
+            //         CameraSwitcher.Instance.ActivateDroneFirstPersonCam();
             //         break;
             //     
             //     case ControllerType.Drone:

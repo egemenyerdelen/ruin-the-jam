@@ -6,20 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="5804334a-21f4-49c2-8d6a-41d95185380c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ruin-the-jam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ruin-the-jam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/External Assets/PBR Racing Drone/Materials/Drone Cam.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/External Assets/PBR Racing Drone/Materials/Drone Cam.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/External Assets/PBR Racing Drone/Materials/Wing Parts.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/External Assets/PBR Racing Drone/Materials/Wing Parts.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/External Assets/PBR Racing Drone/Prefabs/Drone_Parent.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/External Assets/PBR Racing Drone/Prefabs/Drone_Parent.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Drone/Drone.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Drone/Drone.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Generals.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Generals.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Managers.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Managers.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Drone Settings/DefaultDroneSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Drone Settings/DefaultDroneSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraSystem/CameraSwitcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraSystem/CameraSwitcher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Drone/DroneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Drone/DroneController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Drone/DroneInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Drone/PlayerDroneInputHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Drone/DroneInput.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Drone/DroneInputHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Drone/DroneInputHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Drone/PlayerDroneInputHandler.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Drone/DroneSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Drone/DroneSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/Items/TakeOffField.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/Items/TakeOffField.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/Input/InputSwitcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/Input/InputSwitcher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/Input/InputSystem_Actions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/Input/InputSystem_Actions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/Input/InputSystem_Actions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/Input/InputSystem_Actions.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,19 +54,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "refactor-and-cleanup",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;refactor-and-cleanup&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../../Builds/Reach 1.2\Ruin The Jam.exe" />
@@ -134,7 +131,8 @@
       <workItem from="1746263560376" duration="14416000" />
       <workItem from="1746283689081" duration="22104000" />
       <workItem from="1746744669060" duration="8487000" />
-      <workItem from="1747574121793" duration="13671000" />
+      <workItem from="1747574121793" duration="14277000" />
+      <workItem from="1747693326158" duration="1122000" />
     </task>
     <servers />
   </component>

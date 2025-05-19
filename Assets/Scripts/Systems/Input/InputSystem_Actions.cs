@@ -1158,6 +1158,15 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Change Camera"",
+                    ""type"": ""Button"",
+                    ""id"": ""cd3150d4-2575-4ab9-84d2-b0859b7514b3"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -1424,6 +1433,28 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7c786fe9-c986-447e-8d5a-e139b91265e9"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Change Camera"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6cb363d9-ca69-429e-b518-501016883f9a"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""Change Camera"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -1521,6 +1552,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_Drone_Flight = m_Drone.FindAction("Flight", throwIfNotFound: true);
         m_Drone_Thrust = m_Drone.FindAction("Thrust", throwIfNotFound: true);
         m_Drone_Interact = m_Drone.FindAction("Interact", throwIfNotFound: true);
+        m_Drone_ChangeCamera = m_Drone.FindAction("Change Camera", throwIfNotFound: true);
     }
 
     ~@InputSystem_Actions()
@@ -2007,6 +2039,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Drone_Flight;
     private readonly InputAction m_Drone_Thrust;
     private readonly InputAction m_Drone_Interact;
+    private readonly InputAction m_Drone_ChangeCamera;
     /// <summary>
     /// Provides access to input actions defined in input action map "Drone".
     /// </summary>
@@ -2030,6 +2063,10 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Drone/Interact".
         /// </summary>
         public InputAction @Interact => m_Wrapper.m_Drone_Interact;
+        /// <summary>
+        /// Provides access to the underlying input action "Drone/ChangeCamera".
+        /// </summary>
+        public InputAction @ChangeCamera => m_Wrapper.m_Drone_ChangeCamera;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -2065,6 +2102,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Interact.started += instance.OnInteract;
             @Interact.performed += instance.OnInteract;
             @Interact.canceled += instance.OnInteract;
+            @ChangeCamera.started += instance.OnChangeCamera;
+            @ChangeCamera.performed += instance.OnChangeCamera;
+            @ChangeCamera.canceled += instance.OnChangeCamera;
         }
 
         /// <summary>
@@ -2085,6 +2125,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Interact.started -= instance.OnInteract;
             @Interact.performed -= instance.OnInteract;
             @Interact.canceled -= instance.OnInteract;
+            @ChangeCamera.started -= instance.OnChangeCamera;
+            @ChangeCamera.performed -= instance.OnChangeCamera;
+            @ChangeCamera.canceled -= instance.OnChangeCamera;
         }
 
         /// <summary>
@@ -2374,5 +2417,12 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnInteract(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Change Camera" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnChangeCamera(InputAction.CallbackContext context);
     }
 }
