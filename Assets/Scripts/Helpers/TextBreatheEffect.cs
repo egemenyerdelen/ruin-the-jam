@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-
 namespace Helpers
 {
     using UnityEngine;

@@ -1,17 +1,18 @@
 using System;
 using CameraSystem;
 using Drone;
+using InventorySystem.Interfaces;
 using Systems.Input;
 using UnityEngine;
 using Upgrade;
 
 namespace InventorySystem.Items
 {
-    public class TakeOffField : HighlightableItem, IInteractable
+    public class TakeOffField : MonoBehaviour, IInteractable
     {
-        [SerializeField] private PlayerDrone playerDrone;
+        // [SerializeField] private PlayerDrone playerDrone;
         
-        public void Interact()
+        public void Interact(IInteractor interactor)
         {
             // var inputSwitcher = InputSwitcher.Instance;
             //

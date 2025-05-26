@@ -16,7 +16,6 @@ namespace Upgrade
         [SerializeField] private int batteryUpgradeCost;
         [SerializeField] private int distanceUpgradeCost;
         [SerializeField] private int engineUpgradeCost;
-        [SerializeField] private PlayerDrone playerDrone;
 
         public void BatteryUpgrade()
         {
@@ -24,7 +23,6 @@ namespace Upgrade
             if (!CanUpgrade(batteryUpgradeCost)) return;
 
             SpendScrap(batteryUpgradeCost);
-            playerDrone.batteryCap += 10;
         }
 
         public void CarryUpgrade()
@@ -46,10 +44,10 @@ namespace Upgrade
         public void EngineUpgrade()
         {
             if (!CanUpgrade(engineUpgradeCost)) return;
-            if (playerDrone.maxThrust >= 8) return;
+            //if (playerDrone.maxThrust >= 8) return;
             
             SpendScrap(engineUpgradeCost);
-            playerDrone.maxThrust += 2;
+            //playerDrone.maxThrust += 2;
         }
 
         private bool CanUpgrade(int upgradeCost)

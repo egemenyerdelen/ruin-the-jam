@@ -1,12 +1,12 @@
-using CameraSystem;
-using InventorySystem;
+using InventorySystem.Interfaces;
 using UI;
+using UnityEngine;
 
-namespace Upgrade
+namespace Crafting.Upgrade
 {
-    public class UpgradeTable : HighlightableItem, IInteractable
+    public class UpgradeTable : MonoBehaviour, IInteractable
     {
-        public void Interact()
+        public void Interact(IInteractor interactor)
         {
             UIManager.Instance.OpenUpgradeMenu();
             //CameraSwitcher.Instance.SwitchUpgradeCamera();

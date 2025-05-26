@@ -1,8 +1,8 @@
-namespace InventorySystem
+namespace InventorySystem.Interfaces
 {
-    public interface IPickable
+    public interface ICollectable
     {
-        public void PickUp();
+        public void Collect(IInteractor interactor);
     }
 
     public class ItemTypeCountMatch

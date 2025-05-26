@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3295987051540469523}
   - component: {fileID: 8622609174606337578}
   - component: {fileID: 6500549252856389457}
-  - component: {fileID: 9031217565652641513}
+  - component: {fileID: 1064228036459643299}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -77,7 +77,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerRigidbody: {fileID: 8622609174606337578}
   playerMovementForce: 100
---- !u!114 &9031217565652641513
+--- !u!114 &1064228036459643299
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -86,16 +86,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2004949611359372643}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b88b4a9441a24ad1acfee4f8d4885c2b, type: 3}
+  m_Script: {fileID: 11500000, guid: e3d840ffdaaa4cd89b9553e1f237e09c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  droneScript: {fileID: 0}
-  canInteract: 1
-  maxDetectDistance: 5
-  interactableLayer:
-    serializedVersion: 2
-    m_Bits: 1
-  playerCameraTransform: {fileID: 6050476617445701453}
 --- !u!1 &6360144701089544061
 GameObject:
   m_ObjectHideFlags: 0
