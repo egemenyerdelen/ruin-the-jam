@@ -1,10 +1,16 @@
 using InventorySystem;
 using UnityEngine;
 
-namespace Player
+namespace EntitySystem
 {
     public class EntityDataHolder : MonoBehaviour
     {
         public Inventory inventory = new();
+    }
+
+    public enum EntityType
+    {
+        Player,
+        Drone
     }
 }

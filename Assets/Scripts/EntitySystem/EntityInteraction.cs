@@ -4,15 +4,13 @@ using InventorySystem.Interfaces;
 using Systems.Input;
 using UnityEngine;
 
-namespace Player
+namespace EntitySystem
 {
-    public class EntityInteraction : MonoBehaviour, IInteractor
+    public class EntityInteraction : MonoBehaviour
     {
+        public Entity entity;
         public bool canInteract = true;
-
-        public EntityDataHolder EntityDataHolder => entityDataHolder;
-
-        [SerializeField] private EntityDataHolder entityDataHolder;
+        
         [SerializeField] protected float maxDetectDistance = 5f;
         [SerializeField] protected LayerMask interactableLayer;
         [SerializeField] protected Transform entityCameraTransform;
@@ -28,7 +26,7 @@ namespace Player
             InvokeRepeating(nameof(CleanupCache), 30, 15);
         }
 
-        protected virtual void Update()
+        private void Update()
         {
             if (!canInteract) return;
             
@@ -41,7 +39,7 @@ namespace Player
         {
             if (_currentTarget == null || !InputManager.InputSystem.Player.Interact.IsPressed()) return;
             
-            _currentTarget.Interactable?.Interact(this);
+            _currentTarget.Interactable?.Interact(entity);
                 
             ResetTargets();
         }
@@ -54,7 +52,6 @@ namespace Player
                     maxDetectDistance, interactableLayer)) return null;
 
             var targetTransform = hit.collider.transform;
-            Debug.Log(targetTransform.name);
 
             if (_cache.TryGetValue(targetTransform, out var cached))
             {

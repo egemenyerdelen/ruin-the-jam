@@ -9,6 +9,7 @@ namespace Crafting.Upgrade
         public void Interact(IInteractor interactor)
         {
             UIManager.Instance.OpenUpgradeMenu();
+            
             //CameraSwitcher.Instance.SwitchUpgradeCamera();
         }
     }

@@ -1,8 +1,8 @@
 using System;
 using CameraSystem;
-using Drone;
+using EntitySystem;
+using EntitySystem.Player;
 using Helpers;
-using Player;
 using UnityEngine;
 
 namespace Systems.Input

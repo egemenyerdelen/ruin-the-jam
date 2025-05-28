@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Drone
+namespace EntitySystem.Drone
 {
     public class PlayerDroneInputHandler : MonoBehaviour
     {

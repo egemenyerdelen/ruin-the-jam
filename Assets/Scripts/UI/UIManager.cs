@@ -12,12 +12,10 @@ namespace UI
     public class UIManager : Singleton<UIManager>
     {
         public GameObject startScreen;
-
         //public GameObject inGameMenu;
         public GameObject pauseMenu;
-
         public GameObject upgradeMenu;
-
+        
         private InputSystem_Actions _inputActions;
 
         private void Start()

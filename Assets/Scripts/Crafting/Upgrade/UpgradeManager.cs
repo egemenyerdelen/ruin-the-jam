@@ -1,66 +1,73 @@
-using Drone;
+using System;
+using System.Collections.Generic;
+using EntitySystem;
+using EntitySystem.Drone;
 using Helpers;
 using InventorySystem;
-using Player;
+using InventorySystem.Interfaces;
 using UnityEngine;
 
-namespace Upgrade
+namespace Crafting.Upgrade
 {
     public class UpgradeManager : Singleton<UpgradeManager>
     {
-        public EntityDataHolder dataHolder;
-    
-        [SerializeField] private GameObject drone;
-        [SerializeField] private GameObject player;
-        [SerializeField] private int carryUpgradeCost;
-        [SerializeField] private int batteryUpgradeCost;
-        [SerializeField] private int distanceUpgradeCost;
-        [SerializeField] private int engineUpgradeCost;
+        public static event Action<DroneUpgradeDefinition> OnDroneUpgraded;
+        private readonly Dictionary<DroneUpgradeType, int> _droneUpgradeLevels = new();
 
-        public void BatteryUpgrade()
+        public void ApplyDroneUpgrade(DroneUpgradeDefinition droneUpgrade)
         {
-            Debug.Log("BUTTON WORKED");
-            if (!CanUpgrade(batteryUpgradeCost)) return;
-
-            SpendScrap(batteryUpgradeCost);
-        }
-
-        public void CarryUpgrade()
-        {
-            if (!CanUpgrade(carryUpgradeCost)) return;
+            var playerInventory = EntityManager.GetFirstEntityOfType(EntityType.Player).EntityDataHolder.inventory;
             
-            SpendScrap(carryUpgradeCost);
-            // playerDrone.scrapCapacity++;
-        }
+            if (!TrySpendScrap(playerInventory, droneUpgrade.cost))
+            {
+                Debug.LogWarning("Not enough scrap to upgrade.");
+                return;
+            }
 
-        public void DistanceUpgrade()
-        {
-            if (!CanUpgrade(distanceUpgradeCost)) return;
+            var droneObject = EntityManager.GetFirstEntityOfType(EntityType.Drone);
+            var droneControllerScript = droneObject.GetComponent<DroneController>();
+            if (droneControllerScript == null) return;
             
-            SpendScrap(distanceUpgradeCost);
-            // playerDrone.distanceLimit = 5000;
-        }
+            var settings = droneControllerScript.RuntimeSettings;
 
-        public void EngineUpgrade()
-        {
-            if (!CanUpgrade(engineUpgradeCost)) return;
-            //if (playerDrone.maxThrust >= 8) return;
+            switch (droneUpgrade.type)
+            {
+                case DroneUpgradeType.Battery:
+                    settings.batteryCap += droneUpgrade.amount;
+                    break;
+                case DroneUpgradeType.Range:
+                    settings.rangeLimit += droneUpgrade.amount;
+                    break;
+                case DroneUpgradeType.ThrustPower:
+                    settings.thrustPower += droneUpgrade.amount;
+                    break;
+                case DroneUpgradeType.Agility:
+                    break;
+                case DroneUpgradeType.ScrapCapacity:
+                    settings.scrapCapacity += droneUpgrade.amount;
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
             
-            SpendScrap(engineUpgradeCost);
-            //playerDrone.maxThrust += 2;
+            OnDroneUpgraded?.Invoke(droneUpgrade);
+
+            if (!_droneUpgradeLevels.TryAdd(droneUpgrade.type, 0))
+            {
+                _droneUpgradeLevels[droneUpgrade.type] += 1;
+            }
+
+            Debug.Log($"{droneUpgrade.type}{_droneUpgradeLevels[droneUpgrade.type]}");
         }
 
-        private bool CanUpgrade(int upgradeCost)
+        private static bool TrySpendScrap(Inventory inventory, int cost)
         {
-            var activeCount = dataHolder.inventory.Get(ItemTypes.Scrap);
+            var currentScrap = inventory.Get(ItemTypes.Scrap);
 
-            return activeCount > upgradeCost;
-        }
+            if (currentScrap < cost) return false;
 
-        private void SpendScrap(int upgradeCost)
-        {
-            var activeCount = dataHolder.inventory.Get(ItemTypes.Scrap);
-            dataHolder.inventory.Set(ItemTypes.Scrap, activeCount - upgradeCost);
+            inventory.Set(ItemTypes.Scrap, currentScrap - cost);
+            return true;
         }
     }
 }

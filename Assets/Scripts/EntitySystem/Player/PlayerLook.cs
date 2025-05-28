@@ -2,7 +2,7 @@ using Systems.Input;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Player
+namespace EntitySystem.Player
 {
     public class PlayerLook : MonoBehaviour
     {

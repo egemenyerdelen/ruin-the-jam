@@ -1,10 +1,8 @@
 using System;
 using CameraSystem;
-using Drone;
 using InventorySystem.Interfaces;
 using Systems.Input;
 using UnityEngine;
-using Upgrade;
 
 namespace InventorySystem.Items
 {

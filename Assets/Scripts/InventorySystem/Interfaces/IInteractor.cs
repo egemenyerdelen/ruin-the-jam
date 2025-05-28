@@ -1,4 +1,4 @@
-using Player;
+using EntitySystem;
 
 namespace InventorySystem.Interfaces
 {

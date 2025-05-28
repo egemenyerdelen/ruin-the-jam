@@ -120,10 +120,11 @@ GameObject:
   - component: {fileID: 374571251350280630}
   - component: {fileID: 8433391411212767175}
   - component: {fileID: 7312774617565759477}
+  - component: {fileID: 8253328512916470447}
+  - component: {fileID: 5009670045706819618}
   - component: {fileID: 2653033008611119325}
   - component: {fileID: 238756704139160517}
   - component: {fileID: 1900787369539036966}
-  - component: {fileID: 5009670045706819618}
   m_Layer: 0
   m_Name: Drone
   m_TagString: Untagged
@@ -324,6 +325,32 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8253328512916470447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3883080153491160156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e067dc0864d48f99df71483bc2e1902, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityType: 1
+  entityDataHolder: {fileID: 5009670045706819618}
+--- !u!114 &5009670045706819618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3883080153491160156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3d840ffdaaa4cd89b9553e1f237e09c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2653033008611119325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,25 +390,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88b4a9441a24ad1acfee4f8d4885c2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  entity: {fileID: 0}
   canInteract: 1
-  entityDataHolder: {fileID: 5009670045706819618}
   maxDetectDistance: 5
   interactableLayer:
     serializedVersion: 2
     m_Bits: 8
   entityCameraTransform: {fileID: 1212571218961383692}
---- !u!114 &5009670045706819618
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3883080153491160156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3d840ffdaaa4cd89b9553e1f237e09c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1712244678236317859
 PrefabInstance:
   m_ObjectHideFlags: 0

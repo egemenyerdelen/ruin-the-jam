@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Drone
+namespace EntitySystem.Drone
 {
     [CreateAssetMenu(fileName = "DroneSettings", menuName = "Drone/Settings")]
     public class DroneSettings : ScriptableObject
@@ -10,6 +10,9 @@ namespace Drone
         
         [Header("Range")]
         public float rangeLimit = 100f;
+
+        [Header("Capacity")] 
+        public float scrapCapacity = 10f;
         
         [Header("Thrust")]
         public float idleThrust = 9.8f;
