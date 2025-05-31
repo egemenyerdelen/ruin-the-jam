@@ -1,4 +1,5 @@
  using Crafting.Upgrade;
+ using TMPro;
  using UnityEngine;
  using UnityEngine.UI;
  
@@ -8,10 +9,12 @@ namespace UI
     {
         [SerializeField] private DroneUpgradeDefinition upgradeDefinition;
         [SerializeField] private Button upgradeButton;
+        [SerializeField] private TextMeshProUGUI upgradeText;
 
-        private void Awake()
+        private void OnEnable()
         {
             upgradeButton.onClick.AddListener(OnUpgradeClicked);
+            upgradeText.text = name = $"{upgradeDefinition.type}";
         }
 
         private void OnUpgradeClicked()

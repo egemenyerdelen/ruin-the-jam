@@ -8,7 +8,7 @@ namespace Crafting.Upgrade
         public DroneUpgradeType type;
         public int amount;
         public int cost;
-        // public string title;
+        public string title;
         public string description;
         public Sprite icon;
     }
@@ -17,8 +17,8 @@ namespace Crafting.Upgrade
     {
         Battery,
         Range,
-        ThrustPower,
+        Thrust,
         Agility,
-        ScrapCapacity
+        Capacity
     }
 }

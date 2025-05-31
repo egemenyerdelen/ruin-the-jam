@@ -38,12 +38,13 @@ namespace Crafting.Upgrade
                 case DroneUpgradeType.Range:
                     settings.rangeLimit += droneUpgrade.amount;
                     break;
-                case DroneUpgradeType.ThrustPower:
+                case DroneUpgradeType.Thrust:
                     settings.thrustPower += droneUpgrade.amount;
                     break;
                 case DroneUpgradeType.Agility:
+                    settings.pitchRate = settings.rollRate = settings.yawRate += droneUpgrade.amount;
                     break;
-                case DroneUpgradeType.ScrapCapacity:
+                case DroneUpgradeType.Capacity:
                     settings.scrapCapacity += droneUpgrade.amount;
                     break;
                 default:

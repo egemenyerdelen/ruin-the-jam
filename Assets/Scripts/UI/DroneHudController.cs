@@ -1,3 +1,4 @@
+using System;
 using EntitySystem.Drone;
 using InventorySystem;
 using TMPro;
@@ -16,6 +17,11 @@ namespace UI
         public TextMeshProUGUI totalScrap;
         
         [SerializeField] private BatteryIndicator batteryIndicator;
+
+        private void OnEnable()
+        {
+            ForceBatteryIndicatorUpdate();
+        }
 
         private void Start()
         {
@@ -50,6 +56,30 @@ namespace UI
         {
             batteryIndicator.indicatorSteps[0].SetActive(false);
         }
+        
+        private void ForceBatteryIndicatorUpdate()
+        {
+            var step = Mathf.Clamp(Mathf.FloorToInt((droneController.Battery.CurrentBattery / droneController.Battery.MaxBattery) * 4), 0, 4);
+
+            // Turn off all indicators first
+            for (var i = 0; i < batteryIndicator.indicatorSteps.Count; i++)
+            {
+                batteryIndicator.indicatorSteps[i].SetActive(i <= step);
+        
+                var colorChanger = batteryIndicator.indicatorSteps[i].GetComponent<ChangeColorWithTime>();
+                if (colorChanger != null)
+                {
+                    colorChanger.enabled = (i == 0 && step == 0); // Enable blinking only if we're at the lowest battery
+                }
+            }
+
+            // Optionally handle depletion state
+            if (droneController.Battery.CurrentBattery <= 0)
+            {
+                batteryIndicator.indicatorSteps[0].SetActive(false);
+            }
+        }
+
 
         private void OnItemAddedToDroneInventory(ItemTypes itemType, int addedItemCount)
         {

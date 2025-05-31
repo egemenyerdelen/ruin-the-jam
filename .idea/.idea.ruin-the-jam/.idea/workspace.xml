@@ -5,55 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5804334a-21f4-49c2-8d6a-41d95185380c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/Drone/DroneEntity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ruin-the-jam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ruin-the-jam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/External Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Materials/Drone Motor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/External Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Materials/Drone Motor.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/External Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Models/Materials/Drone Battery.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/External Assets/PBR Racing Drone/PBR Racing Drone V1 (Deprecated)/Models/Materials/Drone Battery.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Managers.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Managers.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/HUD.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/HUD.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/UI.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/UI.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Drone Settings/DefaultDroneSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Drone Settings/DefaultDroneSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Drone Upgrades/BatteryUpgrade.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Drone Upgrades/BatteryUpgrade.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraSystem/CameraSwitcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraSystem/CameraSwitcher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Crafting/Upgrade/DroneUpgradeDefinition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Crafting/Upgrade/DroneUpgradeDefinition.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Crafting/Upgrade/UpgradeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Crafting/Upgrade/UpgradeManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/Drone/Drone.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/Drone/Drone.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/Drone/DroneEntity.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/Drone/DroneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/Drone/DroneController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/Drone/PlayerDroneInputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/Drone/DroneInputProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/Drone/PlayerDroneInputHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/Drone/DroneInputProvider.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/Entity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/EntityInteraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/EntityInteraction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/EntityManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/EntityManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/Player.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/Player/PlayerEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/Player/Player.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/Player/PlayerEntity.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/Player/PlayerLook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/Player/PlayerLook.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/Player/PlayerMovementWithRigidbody.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/Player/PlayerMovementWithRigidbody.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Helpers/Singleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Helpers/Singleton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/Items/TakeOffField.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/Items/TakeOffField.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/Input/InputSwitcher.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/Input/InputSwitcher.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/Input/InputSystem_Actions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/Input/InputSystem_Actions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/Input/InputSystem_Actions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/Input/InputSystem_Actions.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Sprites/frame.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Sprites/frame.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Sprites/merkez.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Sprites/merkez.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Sprites/pil içi 4 parça.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Sprites/pil içi 4 parça.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Sprites/pil içi tek parça.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Sprites/pil içi tek parça.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Sprites/pil çerçeve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Sprites/pil çerçeve.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Sprites/çerçeve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Sprites/çerçeve.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DroneHudController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DroneHudController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DroneUpgradeButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DroneUpgradeButton.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +147,7 @@
       <workItem from="1748470494702" duration="5968000" />
       <workItem from="1748602951215" duration="2844000" />
       <workItem from="1748643575344" duration="7886000" />
-      <workItem from="1748685045290" duration="30867000" />
+      <workItem from="1748685045290" duration="35246000" />
     </task>
     <servers />
   </component>
