@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: DefaultDroneSettings
   m_EditorClassIdentifier: 
   batteryCap: 100
-  rangeLimit: 100
+  rangeLimit: 750
+  scrapCapacity: 10
   idleThrust: 9.4
   thrustPower: 1000
   rollRate: 10

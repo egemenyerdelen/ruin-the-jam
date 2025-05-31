@@ -9,7 +9,7 @@ namespace InventorySystem
     {
         private readonly Dictionary<ItemTypes, int> _items = new();
 
-        public static Action<ItemTypes, int> OnItemAdded;
+        public Action<ItemTypes, int> OnItemAdded;
 
         public int Get(ItemTypes type)
         {
@@ -19,29 +19,19 @@ namespace InventorySystem
 
         public void Set(ItemTypes type, int newValue)
         {
-            var currentValue = Get(type);
-
-            if (newValue > currentValue)
-            {
-                var addedAmount = newValue - currentValue;
-                _items[type] = newValue;
-                OnItemAdded?.Invoke(type, addedAmount);
-            }
-            else
-            {
-                _items[type] = newValue;
-            }
+            _items[type] = newValue;
         }
 
-        public void Add(ItemTypes type, int amount)
+        public void Add(ItemTypes type, int addedAmount)
         {
-            if (_items.TryAdd(type, amount))
+            if (_items.TryAdd(type, addedAmount))
             {
-                // Debug.Log($"{type} = {_items[type]}");
+                OnItemAdded?.Invoke(type, addedAmount);
                 return;
             }
             
-            Set(type, Get(type) + amount);
+            Set(type, Get(type) + addedAmount);
+            OnItemAdded?.Invoke(type, addedAmount);
         }
     }
     

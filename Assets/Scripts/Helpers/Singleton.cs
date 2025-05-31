@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Helpers
 {
-    [DisallowMultipleComponent]
+    [DisallowMultipleComponent] [DefaultExecutionOrder(-1000)]
     public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
         private static T _instance;
@@ -11,25 +11,27 @@ namespace Helpers
         {
             get
             {
-#if UNITY_EDITOR
-                if (Application.isPlaying) 
-                    return _instance;
+                if (_instance is not null) return _instance;
                 
-                if (_instance == null) 
-                    _instance = (T)FindFirstObjectByType(typeof(T));
-#endif
+                _instance = FindAnyObjectByType<T>();
+
+                if (_instance is null)
+                {
+                    Debug.LogError($"Singleton of type {typeof(T)} not found in scene!");
+                }
+
                 return _instance;
             }
-
             private set => _instance = value;
         }
+
 
         protected virtual void Awake()
         {
             if (_instance != null && _instance != this)
                 Destroy(this);
-            else
-                _instance = this as T;
+            // else
+            //     _instance = this as T;
         }
     }
 }

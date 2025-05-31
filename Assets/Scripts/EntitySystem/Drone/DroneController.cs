@@ -3,96 +3,54 @@ using UnityEngine;
 
 namespace EntitySystem.Drone
 {
-    [RequireComponent(typeof(Rigidbody))]
     public class DroneController : MonoBehaviour
     {
         [Header("References")]
-        [Required, SerializeField] private PlayerDroneInputHandler inputProvider;
+        [Required, SerializeField] private DroneInputProvider inputProvider;
         [Required, SerializeField] private DroneSettings droneSettings;
         [Required, SerializeField] private Rigidbody droneRigidbody;
-        public DroneSettings RuntimeSettings => _runtimeSettings;
+
+        public DroneBattery Battery { get; private set; }
+        public DronePhysics Physics { get; private set; }
         
+        private DroneInput _input;
+        private DroneSignal _signal;
         private DroneSettings _runtimeSettings;
-        
-        private Vector3 _force;
-        private Vector3 _torque;
 
-        private Vector3 _flightInput;
-        private Vector2 _thrustInput;
-        private float _roll, _pitch, _yaw, _throttle;
-
-        private void Awake()
+        private void Start()
         {
+            var player = EntityManager.GetFirstEntityOfType(EntityType.Player);
             _runtimeSettings = Instantiate(droneSettings);
+            
+            _input = new DroneInput(inputProvider);
+            Battery = new DroneBattery(droneSettings.batteryCap, 0.4f);
+            Physics = new DronePhysics(droneRigidbody, _runtimeSettings);
+            _signal = new DroneSignal(transform, player.transform, droneSettings.rangeLimit, 0.6f);
         }
 
         private void Update()
         {
-            _flightInput = inputProvider.FlightInput;
-            _thrustInput = inputProvider.ThrustInput;
+            _signal.CheckSignal();
+            
+            if (Battery.CurrentBattery <= 0 || !_signal.IsInControlRange)
+            {
+                _input.ResetInputs();
+                return;
+            }
 
-            _roll = _flightInput.x;
-            _pitch = _flightInput.y;
-            _yaw = _thrustInput.x;
-            _throttle = _thrustInput.y;
-        }
+            var inputLag = _signal.GetCurrentLag();
+            _input.SetInputLag(inputLag);
 
-        private void FixedUpdate()
-        {
-            ApplyDronePhysics();
-        }
-
-        private void ApplyDronePhysics()
-        {
-            _force = transform.up * (_runtimeSettings.idleThrust + _runtimeSettings.thrustPower * _throttle * Time.deltaTime);
-            _force -= droneRigidbody.linearVelocity * _runtimeSettings.dragCoefficient;
-
-            var rollVec = transform.forward * (-_roll * _runtimeSettings.rollRate * Time.deltaTime);
-            var pitchVec = transform.right * (_pitch * _runtimeSettings.pitchRate * Time.deltaTime);
-            var yawVec = transform.up * (_yaw * _runtimeSettings.yawRate * Time.deltaTime);
-
-            _torque = rollVec + pitchVec + yawVec;
-
-            ApplyMotionSmoothing();
-            ApplyFlightAssist();
-
-            droneRigidbody.AddForce(_force);
-            droneRigidbody.AddTorque(_torque);
+            _input.Read();
+            Battery.UpdateBattery(Time.fixedDeltaTime);
         }
         
-        private void ApplyMotionSmoothing()
+        private void FixedUpdate()
         {
-            var assistTorque = Vector3.zero;
+            Physics.UpdatePhysics(_input.Roll, _input.Pitch, _input.Yaw, _input.Throttle, Time.fixedDeltaTime);
             
-            assistTorque.x = -droneRigidbody.angularVelocity.x * _runtimeSettings.motionSmoothness * Time.deltaTime;
-            
-            assistTorque.z = -droneRigidbody.angularVelocity.z * _runtimeSettings.motionSmoothness * Time.deltaTime;
-
-            assistTorque.y = -droneRigidbody.angularVelocity.y * _runtimeSettings.motionSmoothness * Time.deltaTime;
-
-            _torque += assistTorque;
-        }
-
-        private void ApplyFlightAssist()
-        {
-            // Skip assist if the player is actively controlling pitch or roll
-            var isInputControlling = 
-                Mathf.Abs(_roll) > _runtimeSettings.rollDeadZone || Mathf.Abs(_pitch) > _runtimeSettings.pitchDeadZone;
-
-            if (isInputControlling) return;
-
-            // Align drone's up direction with world up (Vector3.up)
-            var currentUp = transform.up;
-            var targetUp = Vector3.up;
-
-            // Calculate the torque needed to align up vectors using cross product
-            var stabilizationTorque = Vector3.Cross(currentUp, targetUp) * _runtimeSettings.flightAssist;
-
-            // Apply torque smoothing
-            // Sorry for magic numbers but its neccessary
-            stabilizationTorque -= droneRigidbody.angularVelocity * (_runtimeSettings.flightAssist * 0.01f);
-
-            _torque += stabilizationTorque * .05f;
+            droneRigidbody.AddForce(Physics.Force);
+            droneRigidbody.AddTorque(Physics.Torque);
         }
     }
 }

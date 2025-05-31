@@ -1,4 +1,5 @@
 using System;
+using EntitySystem;
 using Helpers;
 using Systems.Input;
 using Unity.Cinemachine;
@@ -18,13 +19,15 @@ namespace CameraSystem
         private void Start()
         {
             InputManager.InputSystem.Drone.ChangeCamera.performed += ChangeDroneCameraByInput;
+            EntitySwitcher.OnEntitySwitched += SwitchCameraOnControllerSwitched;
             
-            ActivateTargetCamera(activeCameraType);
+            SwitchCamera(activeCameraType);
         }
 
         private void OnDisable()
         {
             InputManager.InputSystem.Drone.ChangeCamera.performed -= ChangeDroneCameraByInput;
+            EntitySwitcher.OnEntitySwitched -= SwitchCameraOnControllerSwitched;
         }
 
         private void ChangeDroneCameraByInput(InputAction.CallbackContext context)
@@ -40,7 +43,7 @@ namespace CameraSystem
             }
         }
         
-        public void ActivateTargetCamera(CustomCameraTypes cameraTypesEnum)
+        public void SwitchCamera(CustomCameraTypes cameraTypesEnum)
         {
             switch (cameraTypesEnum)
             {
@@ -57,6 +60,21 @@ namespace CameraSystem
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
+            }
+        }
+
+        private void SwitchCameraOnControllerSwitched(EntityType entityType)
+        {
+            switch (entityType)
+            {
+                case EntityType.Player:
+                    ActivatePlayerCam();
+                    break;
+                case EntityType.Drone:
+                    ActivateDroneFirstPersonCam();
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(entityType), entityType, null);
             }
         }
 

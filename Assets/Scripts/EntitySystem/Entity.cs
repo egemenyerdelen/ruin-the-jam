@@ -10,12 +10,9 @@ namespace EntitySystem
         
         [SerializeField] 
         private EntityDataHolder entityDataHolder;
-        
-        public string ID { get; private set; }
 
         private void Awake()
         {
-            ID = System.Guid.NewGuid().ToString();
             EntityManager.AddEntityToCatalog(this);
         }
 

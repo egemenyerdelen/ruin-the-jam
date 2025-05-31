@@ -1,5 +1,4 @@
 using System;
-using CameraSystem;
 using GameManagement;
 using Helpers;
 using Systems.Input;
@@ -15,6 +14,7 @@ namespace UI
         //public GameObject inGameMenu;
         public GameObject pauseMenu;
         public GameObject upgradeMenu;
+        public DroneHudController droneHudController;
         
         private InputSystem_Actions _inputActions;
 

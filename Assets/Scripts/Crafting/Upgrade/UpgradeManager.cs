@@ -28,7 +28,7 @@ namespace Crafting.Upgrade
             var droneControllerScript = droneObject.GetComponent<DroneController>();
             if (droneControllerScript == null) return;
             
-            var settings = droneControllerScript.RuntimeSettings;
+            var settings = droneControllerScript.Physics.Settings;
 
             switch (droneUpgrade.type)
             {

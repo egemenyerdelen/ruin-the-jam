@@ -1,6 +1,6 @@
 namespace EntitySystem.Drone
 {
-    public class Drone : Entity
+    public class DroneEntity : Entity
     {
         
     }

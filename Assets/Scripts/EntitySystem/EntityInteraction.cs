@@ -1,8 +1,10 @@
+using System;
 using System.Collections.Generic;
 using InventorySystem;
 using InventorySystem.Interfaces;
 using Systems.Input;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace EntitySystem
 {
@@ -14,16 +16,24 @@ namespace EntitySystem
         [SerializeField] protected float maxDetectDistance = 5f;
         [SerializeField] protected LayerMask interactableLayer;
         [SerializeField] protected Transform entityCameraTransform;
-
+        
         private readonly Dictionary<Transform, CachedTargetData> _cache = new();
         private CachedTargetData _currentTarget;
-        private Transform _previousTargetTransform;
         private Highlightable _highlightableTarget;
         private IInteractable _interactableTarget;
         
         private void Start()
         {
             InvokeRepeating(nameof(CleanupCache), 30, 15);
+            
+            InputManager.InputSystem.Player.Interact.performed += HandleInteraction;
+            EntitySwitcher.OnEntitySwitched += SetInteractableOnEntitiesSwitched;
+        }
+
+        private void OnDisable()
+        {
+            InputManager.InputSystem.Player.Interact.performed -= HandleInteraction;
+            EntitySwitcher.OnEntitySwitched -= SetInteractableOnEntitiesSwitched;
         }
 
         private void Update()
@@ -31,17 +41,21 @@ namespace EntitySystem
             if (!canInteract) return;
             
             _currentTarget = DetectInteraction();
-            
-            HandleInteraction();
         }
-        
-        private void HandleInteraction()
+
+        private void HandleInteraction(InputAction.CallbackContext context)
         {
-            if (_currentTarget == null || !InputManager.InputSystem.Player.Interact.IsPressed()) return;
+            if (!canInteract || _currentTarget == null || _interactableTarget == null) return;
             
-            _currentTarget.Interactable?.Interact(entity);
-                
+            _highlightableTarget.DisableHighlight();
+            _interactableTarget.Interact(entity);
+            
             ResetTargets();
+        }
+
+        private void SetInteractableOnEntitiesSwitched(EntityType entityType)
+        {
+            canInteract = entityType == entity.entityType;
         }
 
         private CachedTargetData DetectInteraction()
@@ -57,13 +71,19 @@ namespace EntitySystem
             {
                 _highlightableTarget = cached.Highlightable;
                 _interactableTarget = cached.Interactable;
-
                 _highlightableTarget?.EnableHighlight();
             }
             else
             {
                 cached = new CachedTargetData(targetTransform);
-                _cache[targetTransform] = cached;
+                
+                if (cached.Highlightable != null && cached.Interactable != null)
+                {
+                    _cache[targetTransform] = cached;
+                    _highlightableTarget = cached.Highlightable;
+                    _interactableTarget = cached.Interactable;
+                    _highlightableTarget?.EnableHighlight();
+                }
             }
 
             return cached;
@@ -72,9 +92,13 @@ namespace EntitySystem
 
         private void ResetTargets()
         {
-            _highlightableTarget?.DisableHighlight();
-            _highlightableTarget = null;
+            if (_highlightableTarget != null && _highlightableTarget.gameObject != null)
+            {
+                _highlightableTarget.DisableHighlight();
+            }
+            
             _interactableTarget = null;
+            _highlightableTarget = null;
         }
         
         private void CleanupCache()
@@ -82,8 +106,11 @@ namespace EntitySystem
             var keysToRemove = new List<Transform>();
             foreach (var kvp in _cache)
             {
-                if (kvp.Key == null)
+                if (kvp.Key == null || kvp.Key.gameObject == null || kvp.Value.Highlightable == null 
+                    || kvp.Value.Interactable == null)
+                {
                     keysToRemove.Add(kvp.Key);
+                }
             }
 
             foreach (var key in keysToRemove)
@@ -97,13 +124,11 @@ namespace EntitySystem
     {
         public readonly Highlightable Highlightable;
         public readonly IInteractable Interactable;
-        public readonly CollectableItem CollectableItem;
 
         public CachedTargetData(Transform root)
         {
             Highlightable = root.GetComponent<Highlightable>();
             Interactable = root.GetComponent<IInteractable>();
-            CollectableItem = root.GetComponent<CollectableItem>();
         }
     }
 }

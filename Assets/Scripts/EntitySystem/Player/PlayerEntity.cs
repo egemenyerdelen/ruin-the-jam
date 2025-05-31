@@ -1,6 +1,6 @@
 namespace EntitySystem.Player
 {
-    public class Player : Entity
+    public class PlayerEntity : Entity
     {
         
     }
