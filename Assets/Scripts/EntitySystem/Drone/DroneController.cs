@@ -9,6 +9,9 @@ namespace EntitySystem.Drone
         [Required, SerializeField] private DroneInputProvider inputProvider;
         [Required, SerializeField] private DroneSettings droneSettings;
         [Required, SerializeField] private Rigidbody droneRigidbody;
+        
+        // FOR TEST
+        [SerializeField] private Transform droneLandingTransform;
 
         public DroneBattery Battery { get; private set; }
         public DronePhysics Physics { get; private set; }
@@ -16,6 +19,7 @@ namespace EntitySystem.Drone
         private DroneInput _input;
         private DroneSignal _signal;
         private DroneSettings _runtimeSettings;
+        private DroneAI _droneAI;
 
         private void Start()
         {
@@ -26,11 +30,19 @@ namespace EntitySystem.Drone
             Battery = new DroneBattery(droneSettings.batteryCap, 0.4f);
             Physics = new DronePhysics(droneRigidbody, _runtimeSettings);
             _signal = new DroneSignal(transform, player.transform, droneSettings.rangeLimit, 0.6f);
+            _droneAI = new DroneAI(this, droneLandingTransform);
         }
 
         private void Update()
         {
             _signal.CheckSignal();
+
+            if (_input.Input.DroneInputActions.Autopilot.WasPerformedThisFrame())
+            {
+                // TODO: Add DroneAI here for to let AI control drone to home
+                EntitySwitcher.Instance.SwitchEntity(EntityType.Player);
+                _droneAI.InitializeLandingSequence();
+            }
             
             if (Battery.CurrentBattery <= 0 || !_signal.IsInControlRange)
             {

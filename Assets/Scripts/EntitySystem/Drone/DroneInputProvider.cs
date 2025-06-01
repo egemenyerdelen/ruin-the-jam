@@ -9,11 +9,11 @@ namespace EntitySystem.Drone
         public Vector3 FlightInput { get; private set; }
         public Vector2 ThrustInput { get; private set; }
         
-        private InputSystem_Actions.DroneActions _droneInputActions;
+        public InputSystem_Actions.DroneActions DroneInputActions { get; private set; }
 
         private void Start()
         {
-            _droneInputActions = InputManager.InputSystem.Drone;
+            DroneInputActions = InputManager.InputSystem.Drone;
         }
 
         private void OnDisable()
@@ -23,19 +23,19 @@ namespace EntitySystem.Drone
 
         public override void EnableInputs()
         {
-            _droneInputActions.Flight.performed += OnFlightPerformed;
-            _droneInputActions.Flight.canceled += OnFlightCanceled;
+            DroneInputActions.Flight.performed += OnFlightPerformed;
+            DroneInputActions.Flight.canceled += OnFlightCanceled;
 
-            _droneInputActions.Thrust.performed += OnThrustPerformed;
-            _droneInputActions.Thrust.canceled += OnThrustCanceled;
+            DroneInputActions.Thrust.performed += OnThrustPerformed;
+            DroneInputActions.Thrust.canceled += OnThrustCanceled;
         }
 
         public override void DisableInputs()
         {
-            _droneInputActions.Thrust.performed -= OnThrustPerformed;
-            _droneInputActions.Thrust.canceled -= OnThrustCanceled;
-            _droneInputActions.Flight.performed -= OnFlightPerformed;
-            _droneInputActions.Flight.canceled -= OnFlightCanceled;
+            DroneInputActions.Thrust.performed -= OnThrustPerformed;
+            DroneInputActions.Thrust.canceled -= OnThrustCanceled;
+            DroneInputActions.Flight.performed -= OnFlightPerformed;
+            DroneInputActions.Flight.canceled -= OnFlightCanceled;
         }
 
         private void OnFlightPerformed(InputAction.CallbackContext ctx) => FlightInput = ctx.ReadValue<Vector3>();

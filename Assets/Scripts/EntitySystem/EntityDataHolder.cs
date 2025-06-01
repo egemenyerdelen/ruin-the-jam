@@ -7,10 +7,4 @@ namespace EntitySystem
     {
         public Inventory inventory = new();
     }
-
-    public enum EntityType
-    {
-        Player,
-        Drone
-    }
 }

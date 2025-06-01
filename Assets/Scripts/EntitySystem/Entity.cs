@@ -21,5 +21,11 @@ namespace EntitySystem
             EntityManager.RemoveEntityFromCatalog(this);
         }
     }
+    
+    public enum EntityType
+    {
+        Player,
+        Drone
+    }
 
 }

@@ -6,11 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="5804334a-21f4-49c2-8d6a-41d95185380c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ruin-the-jam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ruin-the-jam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Drone Upgrades/BatteryUpgrade.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Drone Upgrades/BatteryUpgrade.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Crafting/Upgrade/DroneUpgradeDefinition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Crafting/Upgrade/DroneUpgradeDefinition.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Crafting/Upgrade/UpgradeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Crafting/Upgrade/UpgradeManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DroneHudController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DroneHudController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/Drone/DroneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/Drone/DroneController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/Drone/DroneInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/Drone/DroneInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/Drone/DroneInputProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/Drone/DroneInputProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/Entity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/EntityDataHolder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntitySystem/EntityDataHolder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/Input/InputSystem_Actions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/Input/InputSystem_Actions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/Input/InputSystem_Actions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/Input/InputSystem_Actions.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DroneUpgradeButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DroneUpgradeButton.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -147,7 +150,8 @@
       <workItem from="1748470494702" duration="5968000" />
       <workItem from="1748602951215" duration="2844000" />
       <workItem from="1748643575344" duration="7886000" />
-      <workItem from="1748685045290" duration="35246000" />
+      <workItem from="1748685045290" duration="35669000" />
+      <workItem from="1748793156240" duration="13216000" />
     </task>
     <servers />
   </component>

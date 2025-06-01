@@ -14,7 +14,8 @@ namespace UI
         private void OnEnable()
         {
             upgradeButton.onClick.AddListener(OnUpgradeClicked);
-            upgradeText.text = name = $"{upgradeDefinition.type}";
+            
+            SetUpgradeData();
         }
 
         private void OnUpgradeClicked()
@@ -23,10 +24,9 @@ namespace UI
             Debug.Log($"UPGRADE DONE {upgradeDefinition.type}");
         }
 
-        public void SetUpgradeData(DroneUpgradeDefinition data)
+        private void SetUpgradeData()
         {
-            upgradeDefinition = data;
-            // optionally update visuals like text, icon, etc
+            upgradeText.text = name = $"{upgradeDefinition.type}";
         }
     }
 

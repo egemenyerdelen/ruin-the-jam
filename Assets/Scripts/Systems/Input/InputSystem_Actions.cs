@@ -1156,6 +1156,15 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Autopilot"",
+                    ""type"": ""Button"",
+                    ""id"": ""430563f9-345f-4b5c-9867-636ff780d9f9"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Hold"",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -1444,6 +1453,28 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""action"": ""Change Camera"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5c7d5b52-2969-4d35-8a5d-3455978b0c00"",
+                    ""path"": ""<Keyboard>/h"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Autopilot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1030c6b0-56bc-406a-82e5-fa278c3d1f88"",
+                    ""path"": ""<Gamepad>/rightStickPress"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""Autopilot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -1542,6 +1573,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_Drone_Thrust = m_Drone.FindAction("Thrust", throwIfNotFound: true);
         m_Drone_Interact = m_Drone.FindAction("Interact", throwIfNotFound: true);
         m_Drone_ChangeCamera = m_Drone.FindAction("Change Camera", throwIfNotFound: true);
+        m_Drone_Autopilot = m_Drone.FindAction("Autopilot", throwIfNotFound: true);
     }
 
     ~@InputSystem_Actions()
@@ -2029,6 +2061,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Drone_Thrust;
     private readonly InputAction m_Drone_Interact;
     private readonly InputAction m_Drone_ChangeCamera;
+    private readonly InputAction m_Drone_Autopilot;
     /// <summary>
     /// Provides access to input actions defined in input action map "Drone".
     /// </summary>
@@ -2056,6 +2089,10 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Drone/ChangeCamera".
         /// </summary>
         public InputAction @ChangeCamera => m_Wrapper.m_Drone_ChangeCamera;
+        /// <summary>
+        /// Provides access to the underlying input action "Drone/Autopilot".
+        /// </summary>
+        public InputAction @Autopilot => m_Wrapper.m_Drone_Autopilot;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -2094,6 +2131,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @ChangeCamera.started += instance.OnChangeCamera;
             @ChangeCamera.performed += instance.OnChangeCamera;
             @ChangeCamera.canceled += instance.OnChangeCamera;
+            @Autopilot.started += instance.OnAutopilot;
+            @Autopilot.performed += instance.OnAutopilot;
+            @Autopilot.canceled += instance.OnAutopilot;
         }
 
         /// <summary>
@@ -2117,6 +2157,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @ChangeCamera.started -= instance.OnChangeCamera;
             @ChangeCamera.performed -= instance.OnChangeCamera;
             @ChangeCamera.canceled -= instance.OnChangeCamera;
+            @Autopilot.started -= instance.OnAutopilot;
+            @Autopilot.performed -= instance.OnAutopilot;
+            @Autopilot.canceled -= instance.OnAutopilot;
         }
 
         /// <summary>
@@ -2413,5 +2456,12 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnChangeCamera(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Autopilot" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnAutopilot(InputAction.CallbackContext context);
     }
 }

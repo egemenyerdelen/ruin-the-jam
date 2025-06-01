@@ -1070,6 +1070,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Autopilot",
+                    "type": "Button",
+                    "id": "430563f9-345f-4b5c-9867-636ff780d9f9",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Hold",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1356,6 +1365,28 @@
                     "processors": "",
                     "groups": ";Gamepad",
                     "action": "Change Camera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5c7d5b52-2969-4d35-8a5d-3455978b0c00",
+                    "path": "<Keyboard>/h",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Autopilot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1030c6b0-56bc-406a-82e5-fa278c3d1f88",
+                    "path": "<Gamepad>/rightStickPress",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Autopilot",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

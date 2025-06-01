@@ -10,13 +10,13 @@ namespace EntitySystem.Drone
         public float Yaw { get; private set; }
         public float Throttle { get; private set; }
 
-        private readonly DroneInputProvider _input;
+        public DroneInputProvider Input { get; private set; }
         private readonly Queue<BufferedInput> _inputBuffer = new();
         private float _lagSeconds = 0f;
 
         public DroneInput(DroneInputProvider inputProvider)
         {
-            _input = inputProvider;
+            Input = inputProvider;
         }
         
         public void SetInputLag(float seconds)
@@ -29,10 +29,10 @@ namespace EntitySystem.Drone
             var buffered = new BufferedInput
             {
                 Timestamp = Time.time + _lagSeconds,
-                Roll = _input.GetRoll(),
-                Pitch = _input.GetPitch(),
-                Yaw = _input.GetYaw(),
-                Throttle = _input.GetThrottle()
+                Roll = Input.GetRoll(),
+                Pitch = Input.GetPitch(),
+                Yaw = Input.GetYaw(),
+                Throttle = Input.GetThrottle()
             };
 
             _inputBuffer.Enqueue(buffered);
