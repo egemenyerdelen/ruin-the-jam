@@ -1,27 +1,29 @@
-using System;
 using System.Collections.Generic;
+using EntitySystem;
 using InventorySystem;
 using InventorySystem.Interfaces;
 using Systems.Input;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace EntitySystem
+namespace Systems.InteractionSystem
 {
-    public class EntityInteraction : MonoBehaviour
+    public class InteractionObject : MonoBehaviour, IInteractor
     {
         public Entity entity;
         public bool canInteract = true;
-        
-        [SerializeField] protected float maxDetectDistance = 5f;
-        [SerializeField] protected LayerMask interactableLayer;
-        [SerializeField] protected Transform entityCameraTransform;
+
+        public GameObject InteractorGameObject => gameObject;
+
+        [SerializeField] private float maxDetectDistance = 5f;
+        [SerializeField] private LayerMask interactableLayer;
+        [SerializeField] private Transform entityCameraTransform;
         
         private readonly Dictionary<Transform, CachedTargetData> _cache = new();
         private CachedTargetData _currentTarget;
         private Highlightable _highlightableTarget;
         private IInteractable _interactableTarget;
-        
+
         private void Start()
         {
             InvokeRepeating(nameof(CleanupCache), 30, 15);
@@ -48,7 +50,7 @@ namespace EntitySystem
             if (!canInteract || _currentTarget == null || _interactableTarget == null) return;
             
             _highlightableTarget.DisableHighlight();
-            _interactableTarget.Interact(entity);
+            _interactableTarget.Interact(this);
             
             ResetTargets();
         }

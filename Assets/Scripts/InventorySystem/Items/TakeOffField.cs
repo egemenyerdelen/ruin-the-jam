@@ -1,8 +1,6 @@
 using System;
-using CameraSystem;
 using EntitySystem;
 using InventorySystem.Interfaces;
-using Systems.Input;
 using UnityEngine;
 
 namespace InventorySystem.Items

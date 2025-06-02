@@ -121,7 +121,6 @@ GameObject:
   - component: {fileID: 8433391411212767175}
   - component: {fileID: 7312774617565759477}
   - component: {fileID: 8253328512916470447}
-  - component: {fileID: 5009670045706819618}
   - component: {fileID: 2653033008611119325}
   - component: {fileID: 238756704139160517}
   - component: {fileID: 1900787369539036966}
@@ -338,19 +337,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityType: 1
-  entityDataHolder: {fileID: 5009670045706819618}
---- !u!114 &5009670045706819618
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3883080153491160156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3d840ffdaaa4cd89b9553e1f237e09c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2653033008611119325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,6 +352,7 @@ MonoBehaviour:
   inputProvider: {fileID: 238756704139160517}
   droneSettings: {fileID: 11400000, guid: 85dd95ed1b99d534e8c789afa1baa4a7, type: 2}
   droneRigidbody: {fileID: 8433391411212767175}
+  droneLandingTransform: {fileID: 0}
 --- !u!114 &238756704139160517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,6 +416,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4000010153808938, guid: f5344c194bab9264c93ba5f2f38dab9e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.041
+      objectReference: {fileID: 0}
     - target: {fileID: 4000012611177122, guid: f5344c194bab9264c93ba5f2f38dab9e, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5
@@ -491,19 +482,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 65000011997126844, guid: f5344c194bab9264c93ba5f2f38dab9e, type: 3}
       propertyPath: m_Size.z
-      value: 0.8316227
+      value: 1.3416669
       objectReference: {fileID: 0}
     - target: {fileID: 65000011997126844, guid: f5344c194bab9264c93ba5f2f38dab9e, type: 3}
       propertyPath: m_Center.x
-      value: -0.103607215
+      value: -0.103607185
       objectReference: {fileID: 0}
     - target: {fileID: 65000011997126844, guid: f5344c194bab9264c93ba5f2f38dab9e, type: 3}
       propertyPath: m_Center.y
-      value: 0.18000051
+      value: 0.18000048
       objectReference: {fileID: 0}
     - target: {fileID: 65000011997126844, guid: f5344c194bab9264c93ba5f2f38dab9e, type: 3}
       propertyPath: m_Center.z
-      value: 0.33463722
+      value: 0.07961536
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013314107514, guid: f5344c194bab9264c93ba5f2f38dab9e, type: 3}
+      propertyPath: bobSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013314107514, guid: f5344c194bab9264c93ba5f2f38dab9e, type: 3}
+      propertyPath: bobHeight
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

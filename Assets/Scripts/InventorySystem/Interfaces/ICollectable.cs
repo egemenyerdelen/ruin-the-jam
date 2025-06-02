@@ -2,7 +2,7 @@ namespace InventorySystem.Interfaces
 {
     public interface ICollectable
     {
-        public void Collect(IInteractor interactor);
+        public void Collect(Inventory inventory);
     }
 
     public class ItemTypeCountMatch

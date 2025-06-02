@@ -1,16 +1,14 @@
-using InventorySystem.Interfaces;
+using Core;
+using InventorySystem;
 using UnityEngine;
 
 namespace EntitySystem
 {
-    public abstract class Entity : MonoBehaviour, IInteractor
+    public abstract class Entity : MonoBehaviour, IInventoryHolder
     {
         public EntityType entityType;
-        public EntityDataHolder EntityDataHolder => entityDataHolder;
+        public Inventory Inventory { get; } = new ();
         
-        [SerializeField] 
-        private EntityDataHolder entityDataHolder;
-
         private void Awake()
         {
             EntityManager.AddEntityToCatalog(this);

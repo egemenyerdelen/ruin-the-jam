@@ -1,3 +1,4 @@
+using Core;
 using InventorySystem.Interfaces;
 using InventorySystem.Items;
 
@@ -7,12 +8,14 @@ namespace InventorySystem
     {
         public void Interact(IInteractor interactor)
         {
-            Collect(interactor);
+            var inventory = interactor.InteractorGameObject.GetComponent<IInventoryHolder>().Inventory;
+            
+            Collect(inventory);
         }
 
-        public void Collect(IInteractor interactor)
+        public void Collect(Inventory inventory)
         {
-            interactor.EntityDataHolder.inventory.Add(itemType, itemCount);
+            inventory?.Add(itemType, itemCount);
             Destroy(gameObject);
         }
     }

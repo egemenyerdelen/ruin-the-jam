@@ -1,9 +1,9 @@
-using EntitySystem;
+using UnityEngine;
 
 namespace InventorySystem.Interfaces
 {
     public interface IInteractor
     {
-        EntityDataHolder EntityDataHolder { get; }
+        public GameObject InteractorGameObject { get; }
     }
 }

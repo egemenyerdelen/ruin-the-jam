@@ -1,4 +1,3 @@
-using System;
 using EntitySystem.Drone;
 using InventorySystem;
 using TMPro;
@@ -18,6 +17,8 @@ namespace UI
         
         [SerializeField] private BatteryIndicator batteryIndicator;
 
+        private Inventory _droneInventory;
+
         private void OnEnable()
         {
             ForceBatteryIndicatorUpdate();
@@ -25,6 +26,7 @@ namespace UI
 
         private void Start()
         {
+            _droneInventory = droneEntity.Inventory;
             SubscribeToEvents();
         }
 
@@ -84,14 +86,14 @@ namespace UI
         private void OnItemAddedToDroneInventory(ItemTypes itemType, int addedItemCount)
         {
             if (itemType != ItemTypes.Scrap) return;
-
-            var scrapAmount = droneEntity.EntityDataHolder.inventory.Get(ItemTypes.Scrap);
+            
+            var scrapAmount = _droneInventory.Get(ItemTypes.Scrap);
             totalScrap.text = $"Total Scrap: {scrapAmount}";
         }
 
         private void SubscribeToEvents()
         {
-            droneEntity.EntityDataHolder.inventory.OnItemAdded += OnItemAddedToDroneInventory;
+            _droneInventory.OnItemAdded += OnItemAddedToDroneInventory;
             
             droneController.Battery.OnStepChanged += ChangeBatteryIndicatorOnStepChanged;
             droneController.Battery.OnDepleted += ChangeBatteryIndicatorOnDepleted;
@@ -99,7 +101,7 @@ namespace UI
 
         private void UnsubscribeFromEvents()
         {
-            droneEntity.EntityDataHolder.inventory.OnItemAdded -= OnItemAddedToDroneInventory;
+            _droneInventory.OnItemAdded -= OnItemAddedToDroneInventory;
             
             droneController.Battery.OnStepChanged -= ChangeBatteryIndicatorOnStepChanged;
             droneController.Battery.OnDepleted -= ChangeBatteryIndicatorOnDepleted;

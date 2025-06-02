@@ -4,7 +4,6 @@ using EntitySystem;
 using EntitySystem.Drone;
 using Helpers;
 using InventorySystem;
-using InventorySystem.Interfaces;
 using UnityEngine;
 
 namespace Crafting.Upgrade
@@ -16,7 +15,7 @@ namespace Crafting.Upgrade
 
         public void ApplyDroneUpgrade(DroneUpgradeDefinition droneUpgrade)
         {
-            var playerInventory = EntityManager.GetFirstEntityOfType(EntityType.Player).EntityDataHolder.inventory;
+            var playerInventory = EntityManager.GetFirstEntityOfType(EntityType.Player).Inventory;
             
             if (!TrySpendScrap(playerInventory, droneUpgrade.cost))
             {
