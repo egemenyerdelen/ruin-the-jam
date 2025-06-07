@@ -1,3 +1,7 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using InventorySystem;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -6,12 +10,13 @@ namespace EntitySystem.Drone
     public class DroneController : MonoBehaviour
     {
         [Header("References")]
+        [Required, SerializeField] private DroneEntity drone;
         [Required, SerializeField] private DroneInputProvider inputProvider;
         [Required, SerializeField] private DroneSettings droneSettings;
         [Required, SerializeField] private Rigidbody droneRigidbody;
         
         // FOR TEST
-        [SerializeField] private Transform droneLandingTransform;
+        [SerializeField] private List<Transform> droneLandingTransforms;
 
         public DroneBattery Battery { get; private set; }
         public DronePhysics Physics { get; private set; }
@@ -24,13 +29,21 @@ namespace EntitySystem.Drone
         private void Start()
         {
             var player = EntityManager.GetFirstEntityOfType(EntityType.Player);
+            var reversedTransforms = droneLandingTransforms.AsEnumerable()!.Reverse().ToList();
             _runtimeSettings = Instantiate(droneSettings);
             
             _input = new DroneInput(inputProvider);
             Battery = new DroneBattery(droneSettings.batteryCap, 0.4f);
             Physics = new DronePhysics(droneRigidbody, _runtimeSettings);
             _signal = new DroneSignal(transform, player.transform, droneSettings.rangeLimit, 0.6f);
-            _droneAI = new DroneAI(this, droneLandingTransform);
+            _droneAI = new DroneAI(this, reversedTransforms);
+
+            _droneAI.OnDroneLanded += TransferInventory;
+        }
+
+        private void OnDisable()
+        {
+            _droneAI.OnDroneLanded -= TransferInventory;
         }
 
         private void Update()
@@ -63,6 +76,11 @@ namespace EntitySystem.Drone
             
             droneRigidbody.AddForce(Physics.Force);
             droneRigidbody.AddTorque(Physics.Torque);
+        }
+
+        private void TransferInventory()
+        {
+            EntityManager.GetFirstEntityOfType(EntityType.Player).Inventory.Add(ItemTypes.Scrap, drone.Inventory.Get(ItemTypes.Scrap));
         }
     }
 }

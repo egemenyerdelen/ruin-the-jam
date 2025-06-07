@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
@@ -8,12 +9,22 @@ namespace EntitySystem.Drone
     {
         public DroneController DroneController { get; private set; }
 
-        private Transform _landingTransform;
+        private readonly Transform[] _landingTransforms;
+        private readonly Vector3[] _landingCoordinates;
 
-        public DroneAI(DroneController droneController, Transform droneLandingTransform)
+        public event Action OnDroneLanded;
+
+        public DroneAI(DroneController droneController, List<Transform> droneLandingTransforms)
         {
             DroneController = droneController;
-            _landingTransform = droneLandingTransform;
+            _landingTransforms = droneLandingTransforms.ToArray();
+            
+            _landingCoordinates = new Vector3[_landingTransforms.Length];
+            for (var i = 0; i < _landingTransforms.Length; i++)
+            {
+                _landingCoordinates[i] = _landingTransforms[i].position;
+            }
+            
         }
         
         public void GoHome()
@@ -27,8 +38,9 @@ namespace EntitySystem.Drone
             // Move and rotate with DOTween, and call method when both are finished
             Sequence landingSequence = DOTween.Sequence();
 
-            landingSequence.Append(DroneController.transform.DOMove(_landingTransform.position, 10f).SetEase(Ease.OutCubic));
-            landingSequence.Join(DroneController.transform.DORotateQuaternion(_landingTransform.rotation, 10f).SetEase(Ease.InQuad));
+            landingSequence.Append(DroneController.transform.DOPath(_landingCoordinates, 10f, PathType.CatmullRom));
+            // landingSequence.Append(DroneController.transform.DOMove(_landingTransforms.position, 10f).SetEase(Ease.OutCubic));
+            landingSequence.Join(DroneController.transform.DORotateQuaternion(_landingTransforms[^1].rotation, 10f).SetEase(Ease.InQuad));
             landingSequence.OnComplete(() =>
             {
                 OnLandingSequenceComplete();
@@ -37,7 +49,7 @@ namespace EntitySystem.Drone
 
         private void OnLandingSequenceComplete()
         {
-            
+            OnDroneLanded?.Invoke();
         }
     }
 }

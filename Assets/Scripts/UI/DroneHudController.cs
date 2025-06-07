@@ -83,7 +83,7 @@ namespace UI
         }
 
 
-        private void OnItemAddedToDroneInventory(ItemTypes itemType, int addedItemCount)
+        private void OnItemAddedToDroneInventory(ItemTypes itemType)
         {
             if (itemType != ItemTypes.Scrap) return;
             

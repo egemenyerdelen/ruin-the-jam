@@ -349,10 +349,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29fde3e10eca4af49ff68cce66f5a410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drone: {fileID: 8253328512916470447}
   inputProvider: {fileID: 238756704139160517}
   droneSettings: {fileID: 11400000, guid: 85dd95ed1b99d534e8c789afa1baa4a7, type: 2}
   droneRigidbody: {fileID: 8433391411212767175}
-  droneLandingTransform: {fileID: 0}
+  droneLandingTransforms:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &238756704139160517
 MonoBehaviour:
   m_ObjectHideFlags: 0
