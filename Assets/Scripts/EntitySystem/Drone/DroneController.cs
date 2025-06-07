@@ -38,12 +38,12 @@ namespace EntitySystem.Drone
             _signal = new DroneSignal(transform, player.transform, droneSettings.rangeLimit, 0.6f);
             _droneAI = new DroneAI(this, reversedTransforms);
 
-            _droneAI.OnDroneLanded += TransferInventory;
+            _droneAI.OnDroneLanded += OnDroneLanded;
         }
 
         private void OnDisable()
         {
-            _droneAI.OnDroneLanded -= TransferInventory;
+            _droneAI.OnDroneLanded -= OnDroneLanded;
         }
 
         private void Update()
@@ -67,7 +67,8 @@ namespace EntitySystem.Drone
             _input.SetInputLag(inputLag);
 
             _input.Read();
-            Battery.UpdateBattery(Time.fixedDeltaTime);
+            
+            UpdateBatteryBasedOnInput();
         }
         
         private void FixedUpdate()
@@ -78,6 +79,31 @@ namespace EntitySystem.Drone
             droneRigidbody.AddTorque(Physics.Torque);
         }
 
+        private void UpdateBatteryBasedOnInput()
+        {
+            var isTakingInput = _input.IsDroneTakingInput();
+
+            if (_droneAI.IsDroneLanded && !isTakingInput)
+                return;
+
+            if (isTakingInput)
+            {
+                _droneAI.IsDroneLanded = false;
+                Battery.UpdateBattery(Time.deltaTime);
+            }
+            else
+            {
+                Battery.UpdateBattery(Time.deltaTime * 0.2f);
+            }
+
+        }
+        
+        private void OnDroneLanded()
+        {
+            TransferInventory();
+            Battery.RechargeBattery();
+        }
+        
         private void TransferInventory()
         {
             EntityManager.GetFirstEntityOfType(EntityType.Player).Inventory.Add(ItemTypes.Scrap, drone.Inventory.Get(ItemTypes.Scrap));

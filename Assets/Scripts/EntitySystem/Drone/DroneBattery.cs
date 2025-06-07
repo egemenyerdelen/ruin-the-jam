@@ -23,6 +23,11 @@ namespace EntitySystem.Drone
             _drainRate = drainRate;
             _stepCount = stepCount;
         }
+        
+        public void RechargeBattery()
+        {
+            CurrentBattery = MaxBattery;
+        }
 
         public void UpdateBattery(float delta)
         {

@@ -48,6 +48,11 @@ namespace EntitySystem.Drone
             }
         }
 
+        public bool IsDroneTakingInput()
+        {
+            return Roll != 0 || Pitch != 0 || Yaw != 0 || Throttle != 0;
+        }
+        
         public void ResetInputs()
         {
             _inputBuffer.Clear();

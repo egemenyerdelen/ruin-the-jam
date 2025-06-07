@@ -7,8 +7,9 @@ namespace EntitySystem.Drone
 {
     public class DroneAI
     {
-        public DroneController DroneController { get; private set; }
-
+        public bool IsDroneLanded;
+        
+        private DroneController DroneController { get; set; }
         private readonly Transform[] _landingTransforms;
         private readonly Vector3[] _landingCoordinates;
 
@@ -49,6 +50,7 @@ namespace EntitySystem.Drone
 
         private void OnLandingSequenceComplete()
         {
+            IsDroneLanded = true;
             OnDroneLanded?.Invoke();
         }
     }
